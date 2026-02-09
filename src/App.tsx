@@ -11,6 +11,9 @@ import ProgressPricingPage from "./pages/ProgressPricingPage";
 import ProgressCheckoutPage from "./pages/ProgressCheckoutPage";
 import ProgressAppPage from "./pages/ProgressAppPage";
 
+import ProgressFremdriftsplanPage from "./pages/ProgressFremdriftsplanPage";
+import ProgressFremdriftsplanBrukPage from "./pages/ProgressFremdriftsplanBrukPage";
+
 const App: React.FC = () => {
   return (
     <div className="app-shell">
@@ -24,6 +27,11 @@ const App: React.FC = () => {
           <Route path="/progress" element={<ProgressPage />} />
           <Route path="/progress/oversikt" element={<ProgressOverviewPage />} />
           <Route path="/progress/priser" element={<ProgressPricingPage />} />
+
+          {/* Nye SEO-/læringssider */}
+          <Route path="/progress/fremdriftsplan" element={<ProgressFremdriftsplanPage />} />
+          <Route path="/progress/fremdriftsplan-bruk" element={<ProgressFremdriftsplanBrukPage />} />
+
           <Route path="/progress/app" element={<ProgressAppPage />} />
           <Route path="/progress/checkout" element={<ProgressCheckoutPage />} />
 
