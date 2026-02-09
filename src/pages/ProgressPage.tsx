@@ -3,35 +3,44 @@ import { Link } from "react-router-dom";
 import { useI18n } from "../i18n/useI18n";
 import { LINKS } from "../config/links";
 
-type WhyBullet = { title: string; body: string };
-type Tile = { title: string; body: string };
+type Card = { title: string; body: string };
 
 const ProgressPage: React.FC = () => {
   const { t, lang } = useI18n();
 
-  const heroTagline = t<string>("progress.hero.tagline");
-  const heroLead1 = t<string>("progress.hero.lead1");
-  const heroLead2 = t<string>("progress.hero.lead2");
-  const heroLead3 = t<string>("progress.hero.lead3");
-  const heroLead4 = t<string>("progress.hero.lead4");
+  // RIKTIGE i18n-nøkler (finnes i no.ts/en.ts): progressPage.*
+  const heroTagline = t<string>("progressPage.hero.tagline");
+  const heroIntro = t<string>("progressPage.hero.intro");
+  const heroBadge = t<string>("progressPage.hero.badge");
+  const heroNotifyCta = t<string>("progressPage.hero.notifyCta");
 
-  const ctaMoreBtn = t<string>("progress.cta.moreBtn");
-  const ctaAppBtn = t<string>("progress.cta.appBtn");
-  const ctaPricesBtn = t<string>("progress.cta.pricesBtn");
+  const cards: Card[] = [
+    {
+      title: t<string>("progressPage.cards.oneTruth.title"),
+      body: t<string>("progressPage.cards.oneTruth.body"),
+    },
+    {
+      title: t<string>("progressPage.cards.realProjects.title"),
+      body: t<string>("progressPage.cards.realProjects.body"),
+    },
+    {
+      title: t<string>("progressPage.cards.print.title"),
+      body: t<string>("progressPage.cards.print.body"),
+    },
+    {
+      title: t<string>("progressPage.cards.lowFriction.title"),
+      body: t<string>("progressPage.cards.lowFriction.body"),
+    },
+  ];
 
-  const whyTitle = t<string>("progress.why.title");
-  const whyLead = t<string>("progress.why.lead");
-  const whyBullets = t<WhyBullet[]>("progress.why.bullets") || [];
-  const whyClose = t<string>("progress.why.close");
+  const audienceTitle = t<string>("progressPage.audience.title");
+  const audienceBody = t<string>("progressPage.audience.body");
 
-  const tiles = t<Tile[]>("progress.tiles") || [];
-  const tilesNote = t<string>("progress.tilesNote");
+  const nextTitle = t<string>("progressPage.next.title");
+  const nextBody = t<string>("progressPage.next.body");
 
-  const seeTitle = t<string>("progress.see.title");
-  const seeLead = t<string>("progress.see.lead");
-
-  const learnTitle =
-    lang === "no" ? "Lær mer om fremdriftsplaner" : "Learn more about schedules";
+  // SEO / læring (hardkodet – kan flyttes til språkfil senere hvis du vil)
+  const learnTitle = lang === "no" ? "Lær mer om fremdriftsplaner" : "Learn more about schedules";
   const learnLead =
     lang === "no"
       ? "Vi har skrevet to pedagogiske artikler som forklarer hva en fremdriftsplan er, og hvordan den brukes effektivt i praksis."
@@ -59,10 +68,11 @@ const ProgressPage: React.FC = () => {
           {heroTagline}
         </p>
 
-        <p style={{ maxWidth: 980 }}>{heroLead1}</p>
-        <p style={{ maxWidth: 980, marginTop: "0.75rem" }}>{heroLead2}</p>
-        <p style={{ maxWidth: 980, marginTop: "0.75rem" }}>{heroLead3}</p>
-        <p style={{ maxWidth: 980, marginTop: "0.75rem" }}>{heroLead4}</p>
+        <p style={{ maxWidth: 980 }}>{heroIntro}</p>
+
+        <div style={{ marginTop: "0.75rem", maxWidth: 980, opacity: 0.9 }}>
+          <strong>{heroBadge}</strong>
+        </div>
 
         {/* CTA buttons */}
         <div
@@ -74,61 +84,44 @@ const ProgressPage: React.FC = () => {
             alignItems: "center",
           }}
         >
-          <Link className="hero-cta" to="/progress/oversikt">
-            {ctaMoreBtn}
-          </Link>
-
-          {/* Ekstern lenke til Progress-appen */}
           <a className="hero-cta" href={LINKS.progress} rel="noopener noreferrer">
-            {ctaAppBtn}
+            {lang === "no" ? "Åpne Progress" : "Open Progress"}
           </a>
 
           <Link className="hero-cta" to="/progress/priser">
-            {ctaPricesBtn}
+            {lang === "no" ? "Se priser" : "See pricing"}
           </Link>
+
+          {/* Behold denne som “kontakt”-CTA (som teksten antyder), eller bytt til /kontakt om du har */}
+          <a className="hero-cta" href={LINKS.mcl} rel="noopener noreferrer">
+            {heroNotifyCta}
+          </a>
         </div>
       </section>
 
-      {/* WHY */}
+      {/* CARDS */}
       <section className="intro-grid two-columns" style={{ marginTop: 0 }}>
-        <div className="intro-card" style={{ gridColumn: "1 / -1" }}>
-          <h3 style={{ marginTop: 0 }}>{whyTitle}</h3>
-
-          <p style={{ marginTop: "0.5rem" }}>{whyLead}</p>
-
-          <ul style={{ marginTop: "0.75rem", paddingLeft: "1.25rem" }}>
-            {whyBullets.map((b) => (
-              <li key={b.title} style={{ marginBottom: "0.45rem" }}>
-                <strong>{b.title}</strong> – {b.body}
-              </li>
-            ))}
-          </ul>
-
-          <p style={{ marginBottom: 0, marginTop: "0.75rem", whiteSpace: "pre-line" }}>
-            {whyClose}
-          </p>
-        </div>
-      </section>
-
-      {/* TILES */}
-      <section className="intro-grid two-columns">
-        {tiles.map((tile) => (
-          <div className="intro-card" key={tile.title}>
-            <h3 style={{ marginTop: 0 }}>{tile.title}</h3>
-            <p>{tile.body}</p>
+        {cards.map((c) => (
+          <div className="intro-card" key={c.title}>
+            <h3 style={{ marginTop: 0 }}>{c.title}</h3>
+            <p style={{ marginBottom: 0 }}>{c.body}</p>
           </div>
         ))}
+      </section>
 
+      {/* AUDIENCE */}
+      <section className="intro-grid two-columns">
         <div className="intro-card" style={{ gridColumn: "1 / -1" }}>
-          <p style={{ margin: 0, whiteSpace: "pre-line" }}>{tilesNote}</p>
+          <h3 style={{ marginTop: 0 }}>{audienceTitle}</h3>
+          <p style={{ marginBottom: 0 }}>{audienceBody}</p>
         </div>
       </section>
 
-      {/* CTA (content only) */}
+      {/* NEXT */}
       <section className="intro-grid two-columns">
         <div className="intro-card" style={{ gridColumn: "1 / -1" }}>
-          <h3 style={{ marginTop: 0 }}>{seeTitle}</h3>
-          <p style={{ marginBottom: 0 }}>{seeLead}</p>
+          <h3 style={{ marginTop: 0 }}>{nextTitle}</h3>
+          <p style={{ marginBottom: 0 }}>{nextBody}</p>
         </div>
       </section>
 
