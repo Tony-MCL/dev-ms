@@ -7,13 +7,16 @@ import "./styles/globals.css";
 import "./styles/styles.css";
 
 import { I18nProvider } from "./i18n/I18nProvider";
+import ErrorBoundary from "./ErrorBoundary";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <HashRouter>
-      <I18nProvider>
-        <App />
-      </I18nProvider>
-    </HashRouter>
+    <ErrorBoundary>
+      <HashRouter>
+        <I18nProvider>
+          <App />
+        </I18nProvider>
+      </HashRouter>
+    </ErrorBoundary>
   </React.StrictMode>
 );
