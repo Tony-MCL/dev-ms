@@ -1,14 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useI18n } from "../i18n/useI18n";
-import { LINKS } from "../config/links";
 
 type Card = { title: string; body: string };
 
 const ProgressPage: React.FC = () => {
   const { t, lang } = useI18n();
+  const isNo = lang === "no";
 
-  // RIKTIGE i18n-nøkler (finnes i no.ts/en.ts): progressPage.*
+  // Riktig “nåværende” oppsett i språkfilene: progressPage.*
   const heroTagline = t<string>("progressPage.hero.tagline");
   const heroIntro = t<string>("progressPage.hero.intro");
   const heroBadge = t<string>("progressPage.hero.badge");
@@ -38,29 +38,27 @@ const ProgressPage: React.FC = () => {
 
   const nextTitle = t<string>("progressPage.next.title");
   const nextBody = t<string>("progressPage.next.body");
+  const backToMcl = t<string>("progressPage.next.back");
 
-  // SEO / læring (hardkodet – kan flyttes til språkfil senere hvis du vil)
-  const learnTitle = lang === "no" ? "Lær mer om fremdriftsplaner" : "Learn more about schedules";
-  const learnLead =
-    lang === "no"
-      ? "Vi har skrevet to pedagogiske artikler som forklarer hva en fremdriftsplan er, og hvordan den brukes effektivt i praksis."
-      : "Two practical articles explain what a schedule is, and how to use it effectively.";
+  // Midlertidig hardkodet – flyttes til språkfil når alt er stabilt
+  const learnTitle = isNo ? "Lær mer om fremdriftsplaner" : "Learn more about schedules";
+  const learnLead = isNo
+    ? "Vi har skrevet to pedagogiske artikler som forklarer hva en fremdriftsplan er, og hvordan den brukes effektivt i praksis."
+    : "Two practical articles explain what a schedule is, and how to use it effectively.";
 
-  const article1Title =
-    lang === "no"
-      ? "Hva er en fremdriftsplan – og hvorfor er den et av de viktigste verktøyene du kan lære deg?"
-      : "What is a schedule – and why is it one of the most important tools you can learn?";
-  const article1Cta = lang === "no" ? "Les artikkel 1 →" : "Read article 1 →";
+  const article1Title = isNo
+    ? "Hva er en fremdriftsplan – og hvorfor er den et av de viktigste verktøyene du kan lære deg?"
+    : "What is a schedule – and why is it one of the most important tools you can learn?";
+  const article1Cta = isNo ? "Les artikkel 1 →" : "Read article 1 →";
 
-  const article2Title =
-    lang === "no"
-      ? "Hvordan bruke en fremdriftsplan effektivt – og hva du faktisk har å vinne på det"
-      : "How to use a schedule effectively – and what you actually gain from it";
-  const article2Cta = lang === "no" ? "Les artikkel 2 →" : "Read article 2 →";
+  const article2Title = isNo
+    ? "Hvordan bruke en fremdriftsplan effektivt – og hva du faktisk har å vinne på det"
+    : "How to use a schedule effectively – and what you actually gain from it";
+  const article2Cta = isNo ? "Les artikkel 2 →" : "Read article 2 →";
 
   return (
     <main className="page">
-      {/* HERO */}
+      {/* HERO (rolig, uten gamle CTA-knapper) */}
       <section className="fs-hero">
         <h1>Manage Progress</h1>
 
@@ -70,33 +68,14 @@ const ProgressPage: React.FC = () => {
 
         <p style={{ maxWidth: 980 }}>{heroIntro}</p>
 
-        <div style={{ marginTop: "0.75rem", maxWidth: 980, opacity: 0.9 }}>
+        <p style={{ maxWidth: 980, marginTop: "0.75rem", opacity: 0.9 }}>
           <strong>{heroBadge}</strong>
-        </div>
+        </p>
 
-        {/* CTA buttons */}
-        <div
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            gap: "0.8rem",
-            marginTop: "1rem",
-            alignItems: "center",
-          }}
-        >
-          <a className="hero-cta" href={LINKS.progress} rel="noopener noreferrer">
-            {lang === "no" ? "Åpne Progress" : "Open Progress"}
-          </a>
-
-          <Link className="hero-cta" to="/progress/priser">
-            {lang === "no" ? "Se priser" : "See pricing"}
-          </Link>
-
-          {/* Behold denne som “kontakt”-CTA (som teksten antyder), eller bytt til /kontakt om du har */}
-          <a className="hero-cta" href={LINKS.mcl} rel="noopener noreferrer">
-            {heroNotifyCta}
-          </a>
-        </div>
+        {/* “Notify” som enkel lenke (ikke knapp) */}
+        <p style={{ maxWidth: 980, marginTop: "0.75rem", marginBottom: 0 }}>
+          <Link to="/kontakt">{heroNotifyCta}</Link>
+        </p>
       </section>
 
       {/* CARDS */}
@@ -114,14 +93,6 @@ const ProgressPage: React.FC = () => {
         <div className="intro-card" style={{ gridColumn: "1 / -1" }}>
           <h3 style={{ marginTop: 0 }}>{audienceTitle}</h3>
           <p style={{ marginBottom: 0 }}>{audienceBody}</p>
-        </div>
-      </section>
-
-      {/* NEXT */}
-      <section className="intro-grid two-columns">
-        <div className="intro-card" style={{ gridColumn: "1 / -1" }}>
-          <h3 style={{ marginTop: 0 }}>{nextTitle}</h3>
-          <p style={{ marginBottom: 0 }}>{nextBody}</p>
         </div>
       </section>
 
@@ -143,6 +114,17 @@ const ProgressPage: React.FC = () => {
           <h3 style={{ marginTop: 0 }}>{article2Title}</h3>
           <p style={{ marginBottom: 0 }}>
             <Link to="/progress/fremdriftsplan-bruk">{article2Cta}</Link>
+          </p>
+        </div>
+      </section>
+
+      {/* NEXT */}
+      <section className="intro-grid two-columns">
+        <div className="intro-card" style={{ gridColumn: "1 / -1" }}>
+          <h3 style={{ marginTop: 0 }}>{nextTitle}</h3>
+          <p style={{ marginBottom: "0.75rem" }}>{nextBody}</p>
+          <p style={{ marginBottom: 0 }}>
+            <Link to="/">{backToMcl}</Link>
           </p>
         </div>
       </section>
