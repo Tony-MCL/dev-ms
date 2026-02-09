@@ -7,6 +7,6 @@ export default defineConfig(() => {
 
   return {
     plugins: [react()],
-    base: isCloudflare ? "/" : "/ms-website/",
+    base: "./",
   };
 });
