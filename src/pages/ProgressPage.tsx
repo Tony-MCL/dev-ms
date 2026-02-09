@@ -7,7 +7,7 @@ type WhyBullet = { title: string; body: string };
 type Tile = { title: string; body: string };
 
 const ProgressPage: React.FC = () => {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
 
   const heroTagline = t<string>("progress.hero.tagline");
   const heroLead1 = t<string>("progress.hero.lead1");
@@ -29,6 +29,25 @@ const ProgressPage: React.FC = () => {
 
   const seeTitle = t<string>("progress.see.title");
   const seeLead = t<string>("progress.see.lead");
+
+  const learnTitle =
+    lang === "no" ? "Lær mer om fremdriftsplaner" : "Learn more about schedules";
+  const learnLead =
+    lang === "no"
+      ? "Vi har skrevet to pedagogiske artikler som forklarer hva en fremdriftsplan er, og hvordan den brukes effektivt i praksis."
+      : "Two practical articles explain what a schedule is, and how to use it effectively.";
+
+  const article1Title =
+    lang === "no"
+      ? "Hva er en fremdriftsplan – og hvorfor er den et av de viktigste verktøyene du kan lære deg?"
+      : "What is a schedule – and why is it one of the most important tools you can learn?";
+  const article1Cta = lang === "no" ? "Les artikkel 1 →" : "Read article 1 →";
+
+  const article2Title =
+    lang === "no"
+      ? "Hvordan bruke en fremdriftsplan effektivt – og hva du faktisk har å vinne på det"
+      : "How to use a schedule effectively – and what you actually gain from it";
+  const article2Cta = lang === "no" ? "Les artikkel 2 →" : "Read article 2 →";
 
   return (
     <main className="page">
@@ -110,6 +129,28 @@ const ProgressPage: React.FC = () => {
         <div className="intro-card" style={{ gridColumn: "1 / -1" }}>
           <h3 style={{ marginTop: 0 }}>{seeTitle}</h3>
           <p style={{ marginBottom: 0 }}>{seeLead}</p>
+        </div>
+      </section>
+
+      {/* SEO / læring: artikler */}
+      <section className="intro-grid two-columns">
+        <div className="intro-card" style={{ gridColumn: "1 / -1" }}>
+          <h3 style={{ marginTop: 0 }}>{learnTitle}</h3>
+          <p style={{ marginBottom: 0 }}>{learnLead}</p>
+        </div>
+
+        <div className="intro-card">
+          <h3 style={{ marginTop: 0 }}>{article1Title}</h3>
+          <p style={{ marginBottom: 0 }}>
+            <Link to="/progress/fremdriftsplan">{article1Cta}</Link>
+          </p>
+        </div>
+
+        <div className="intro-card">
+          <h3 style={{ marginTop: 0 }}>{article2Title}</h3>
+          <p style={{ marginBottom: 0 }}>
+            <Link to="/progress/fremdriftsplan-bruk">{article2Cta}</Link>
+          </p>
         </div>
       </section>
     </main>
