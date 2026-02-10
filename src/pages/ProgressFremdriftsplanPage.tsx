@@ -17,16 +17,69 @@ function setMeta(title: string, description: string) {
 }
 
 const ProgressFremdriftsplanPage: React.FC = () => {
-  const { lang } = useI18n();
-  const isNo = lang === "no";
+  const { t } = useI18n();
 
-  const title = isNo
-    ? "Hva er en fremdriftsplan – og hvorfor er den et av de viktigste verktøyene du kan lære deg?"
-    : "What is a schedule – and why is it one of the most important tools you can learn?";
+  const title = t<string>("progressArticles.fremdriftsplan.meta.title");
+  const description = t<string>("progressArticles.fremdriftsplan.meta.description");
 
-  const description = isNo
-    ? "Lær hva en fremdriftsplan er, hvorfor den gir kontroll og forutsigbarhet, og hvordan den går fra statisk plan til levende styringsverktøy."
-    : "Learn what a schedule is, why it creates predictability and control, and how it evolves from a static plan into a living management tool.";
+  const heroTagline = t<string>("progressArticles.fremdriftsplan.hero.tagline");
+
+  const ctaBack = t<string>("progressArticles.fremdriftsplan.cta.back");
+  const ctaOpen = t<string>("progressArticles.fremdriftsplan.cta.openApp");
+  const ctaNext = t<string>("progressArticles.fremdriftsplan.cta.next");
+
+  const sWhatTitle = t<string>("progressArticles.fremdriftsplan.sections.what.title");
+  const sWhatBody = t<string>("progressArticles.fremdriftsplan.sections.what.body");
+
+  const sWhyTitle = t<string>("progressArticles.fremdriftsplan.sections.why.title");
+  const sWhyP1 = t<string>("progressArticles.fremdriftsplan.sections.why.p1");
+  const sWhyLead = t<string>("progressArticles.fremdriftsplan.sections.why.lead");
+  const sWhyBullets = t<string[]>("progressArticles.fremdriftsplan.sections.why.bullets") || [];
+  const sWhyClose = t<string>("progressArticles.fremdriftsplan.sections.why.close");
+
+  const sStaticTitle = t<string>("progressArticles.fremdriftsplan.sections.static.title");
+  const sStaticP1 = t<string>("progressArticles.fremdriftsplan.sections.static.p1");
+  const sStaticLead = t<string>("progressArticles.fremdriftsplan.sections.static.lead");
+  const sStaticBullets = t<string[]>("progressArticles.fremdriftsplan.sections.static.bullets") || [];
+  const sStaticP2 = t<string>("progressArticles.fremdriftsplan.sections.static.p2");
+  const sStaticP3 = t<string>("progressArticles.fremdriftsplan.sections.static.p3");
+
+  const sRealityTitle = t<string>("progressArticles.fremdriftsplan.sections.reality.title");
+  const sRealityP1 = t<string>("progressArticles.fremdriftsplan.sections.reality.p1");
+  const sRealityP2 = t<string>("progressArticles.fremdriftsplan.sections.reality.p2");
+
+  const sLivingTitle = t<string>("progressArticles.fremdriftsplan.sections.living.title");
+  const sLivingP1 = t<string>("progressArticles.fremdriftsplan.sections.living.p1");
+  const sLivingLead = t<string>("progressArticles.fremdriftsplan.sections.living.lead");
+  const sLivingP2 = t<string>("progressArticles.fremdriftsplan.sections.living.p2");
+
+  const sWhoTitle = t<string>("progressArticles.fremdriftsplan.sections.who.title");
+  const sWhoP1 = t<string>("progressArticles.fremdriftsplan.sections.who.p1");
+
+  const sWhoBuildTitle = t<string>("progressArticles.fremdriftsplan.sections.who.build.title");
+  const sWhoBuildBullets = t<string[]>("progressArticles.fremdriftsplan.sections.who.build.bullets") || [];
+
+  const sWhoItTitle = t<string>("progressArticles.fremdriftsplan.sections.who.it.title");
+  const sWhoItBullets = t<string[]>("progressArticles.fremdriftsplan.sections.who.it.bullets") || [];
+
+  const sWhoSchoolTitle = t<string>("progressArticles.fremdriftsplan.sections.who.school.title");
+  const sWhoSchoolBody = t<string>("progressArticles.fremdriftsplan.sections.who.school.body");
+
+  const sWhoHealthTitle = t<string>("progressArticles.fremdriftsplan.sections.who.health.title");
+  const sWhoHealthBody = t<string>("progressArticles.fremdriftsplan.sections.who.health.body");
+
+  const sWhoPersonalTitle = t<string>("progressArticles.fremdriftsplan.sections.who.personal.title");
+  const sWhoPersonalBullets = t<string[]>("progressArticles.fremdriftsplan.sections.who.personal.bullets") || [];
+
+  const sGainTitle = t<string>("progressArticles.fremdriftsplan.sections.gain.title");
+  const sGainBullets = t<string[]>("progressArticles.fremdriftsplan.sections.gain.bullets") || [];
+  const sGainClose = t<string>("progressArticles.fremdriftsplan.sections.gain.close");
+
+  const sPracticeTitle = t<string>("progressArticles.fremdriftsplan.sections.practice.title");
+  const sPracticeP1 = t<string>("progressArticles.fremdriftsplan.sections.practice.p1");
+  const sPracticeP2 = t<string>("progressArticles.fremdriftsplan.sections.practice.p2");
+  const sPracticeCtaTry = t<string>("progressArticles.fremdriftsplan.sections.practice.ctaTry");
+  const sPracticeCtaPrices = t<string>("progressArticles.fremdriftsplan.sections.practice.ctaPrices");
 
   useEffect(() => {
     setMeta(title, description);
@@ -38,9 +91,7 @@ const ProgressFremdriftsplanPage: React.FC = () => {
         <h1>{title}</h1>
 
         <p className="fs-tagline" style={{ maxWidth: 980 }}>
-          {isNo
-            ? "Hvis du noen gang har vært med på et prosjekt som startet med gode intensjoner, men endte i stress, misforståelser og forsinkelser, er sjansen stor for at én ting manglet: en tydelig fremdriftsplan."
-            : "If you've ever been in a project that started with good intentions but ended in stress, misunderstandings, and delays, chances are one thing was missing: a clear schedule."}
+          {heroTagline}
         </p>
 
         <div
@@ -53,216 +104,123 @@ const ProgressFremdriftsplanPage: React.FC = () => {
           }}
         >
           <Link className="hero-cta" to="/progress">
-            {isNo ? "← Tilbake til Progress" : "← Back to Progress"}
+            {ctaBack}
           </Link>
 
           <a className="hero-cta" href={LINKS.progress} rel="noopener noreferrer">
-            {isNo ? "Åpne Progress-appen" : "Open the Progress app"}
+            {ctaOpen}
           </a>
 
           <Link className="hero-cta" to="/progress/fremdriftsplan-bruk">
-            {isNo ? "Videre: Bruk planen effektivt →" : "Next: Use it effectively →"}
+            {ctaNext}
           </Link>
         </div>
       </section>
 
       <section className="intro-grid two-columns" style={{ marginTop: 0 }}>
         <div className="intro-card" style={{ gridColumn: "1 / -1" }}>
-          <h2 style={{ marginTop: 0 }}>{isNo ? "Hva er en fremdriftsplan?" : "What is a schedule?"}</h2>
-          <p style={{ marginTop: "0.5rem" }}>
-            {isNo
-              ? "En fremdriftsplan er i sin enkleste form en oversikt som viser hva som skal gjøres, i hvilken rekkefølge og når. Men i praksis er den langt mer enn bare en tidslinje. Riktig brukt er fremdriftsplanen et av de mest kraftfulle verktøyene vi har for å skape struktur, forutsigbarhet og kontroll – uansett fagfelt."
-              : "A schedule is, at its simplest, an overview showing what needs to be done, in what order, and when. In practice it's far more than a timeline. Used well, it is one of the most powerful tools we have for structure, predictability, and control—regardless of domain."}
-          </p>
+          <h2 style={{ marginTop: 0 }}>{sWhatTitle}</h2>
+          <p style={{ marginTop: "0.5rem" }}>{sWhatBody}</p>
         </div>
 
         <div className="intro-card" style={{ gridColumn: "1 / -1" }}>
-          <h2 style={{ marginTop: 0 }}>{isNo ? "Hvorfor trenger vi fremdriftsplaner?" : "Why do we need schedules?"}</h2>
-          <p style={{ marginTop: "0.5rem" }}>
-            {isNo
-              ? "Et prosjekt – enten det er bygging av en skole, utvikling av programvare, planlegging av et skoleår eller rehabilitering etter skade – består alltid av mange oppgaver, begrenset tid, begrensede ressurser og mennesker som er avhengige av hverandre."
-              : "A project—whether it's building a school, developing software, planning an academic year, or rehabilitation—always involves many tasks, limited time, limited resources, and people who depend on each other."}
-          </p>
+          <h2 style={{ marginTop: 0 }}>{sWhyTitle}</h2>
+          <p style={{ marginTop: "0.5rem" }}>{sWhyP1}</p>
 
-          <p style={{ marginTop: "0.75rem" }}>
-            {isNo ? "Uten en fremdriftsplan skjer ofte det samme:" : "Without a schedule, the same things tend to happen:"}
-          </p>
+          <p style={{ marginTop: "0.75rem" }}>{sWhyLead}</p>
 
           <ul style={{ marginTop: "0.5rem", paddingLeft: "1.25rem" }}>
-            <li>{isNo ? "Oppgaver blir gjort i feil rekkefølge" : "Tasks happen in the wrong order"}</li>
-            <li>{isNo ? "Viktige aktiviteter blir glemt" : "Important activities are forgotten"}</li>
-            <li>{isNo ? "Frister settes uten helhetlig vurdering" : "Deadlines are set without a holistic view"}</li>
-            <li>{isNo ? "Ingen har full oversikt" : "No one has the full picture"}</li>
+            {sWhyBullets.map((x, i) => (
+              <li key={`${i}-${x}`}>{x}</li>
+            ))}
           </ul>
 
-          <p style={{ marginBottom: 0, marginTop: "0.75rem" }}>
-            {isNo
-              ? "En fremdriftsplan tvinger oss til å tenke gjennom prosjektet før vi starter. Den gjør det mulig å stille de riktige spørsmålene tidlig, når det fortsatt er enkelt å justere."
-              : "A schedule forces us to think the project through before we start. It helps us ask the right questions early—when it's still easy to adjust."}
-          </p>
+          <p style={{ marginBottom: 0, marginTop: "0.75rem" }}>{sWhyClose}</p>
         </div>
 
         <div className="intro-card" style={{ gridColumn: "1 / -1" }}>
-          <h2 style={{ marginTop: 0 }}>
-            {isNo ? "Planleggingsverktøyet (den statiske fasen)" : "The planning tool (the static phase)"}
-          </h2>
+          <h2 style={{ marginTop: 0 }}>{sStaticTitle}</h2>
 
-          <p style={{ marginTop: "0.5rem" }}>
-            {isNo
-              ? "I mange prosjekter starter fremdriftsplanen som et statisk planleggingsverktøy. Denne fasen undervurderes ofte – men er helt avgjørende."
-              : "In many projects, the schedule starts as a static planning tool. This phase is often underestimated—but it's crucial."}
-          </p>
+          <p style={{ marginTop: "0.5rem" }}>{sStaticP1}</p>
 
-          <p style={{ marginTop: "0.75rem" }}>
-            {isNo ? "Her brukes planen til å:" : "Here it's used to:"}
-          </p>
+          <p style={{ marginTop: "0.75rem" }}>{sStaticLead}</p>
 
           <ul style={{ marginTop: "0.5rem", paddingLeft: "1.25rem" }}>
-            <li>{isNo ? "bryte prosjektet ned i konkrete oppgaver" : "break the project into concrete tasks"}</li>
-            <li>{isNo ? "vurdere rekkefølge og avhengigheter" : "assess order and dependencies"}</li>
-            <li>{isNo ? "estimere tidsbruk" : "estimate duration"}</li>
-            <li>{isNo ? "planlegge bemanning og ressurser" : "plan staffing and resources"}</li>
+            {sStaticBullets.map((x, i) => (
+              <li key={`${i}-${x}`}>{x}</li>
+            ))}
           </ul>
 
-          <p style={{ marginTop: "0.75rem" }}>
-            {isNo
-              ? "Derfor brukes fremdriftsplaner ofte som vedlegg i tilbud og anbud, beslutningsgrunnlag for ledelse og eiere, og en felles referanse i tidlig planlegging."
-              : "That’s why schedules are often used as attachments in bids, as decision support for management and owners, and as a shared reference early on."}
-          </p>
-
-          <p style={{ marginBottom: 0 }}>
-            {isNo
-              ? "Det er helt vanlig – og helt riktig – at planen i denne fasen deles som PDF. Den fungerer da som et fast bilde av hvordan prosjektet er tenkt gjennomført, gitt dagens forutsetninger."
-              : "It’s common—and correct—for this phase to be shared as a PDF. It becomes a fixed snapshot of how the project is expected to run, given today's assumptions."}
-          </p>
+          <p style={{ marginTop: "0.75rem" }}>{sStaticP2}</p>
+          <p style={{ marginBottom: 0 }}>{sStaticP3}</p>
         </div>
 
         <div className="intro-card" style={{ gridColumn: "1 / -1" }}>
-          <h2 style={{ marginTop: 0 }}>
-            {isNo ? "Når planen møter virkeligheten" : "When the plan meets reality"}
-          </h2>
-
-          <p style={{ marginTop: "0.5rem" }}>
-            {isNo
-              ? "Prosjekter lever. Når gjennomføringen starter, melder virkeligheten seg: leveranser blir forsinket, ressurser endres, nye oppgaver dukker opp, noe tar kortere – annet tar lengre."
-              : "Projects are living. Once execution starts, reality shows up: deliveries slip, resources change, new tasks appear, some things take less time—others more."}
-          </p>
-
-          <p style={{ marginBottom: 0, marginTop: "0.75rem" }}>
-            {isNo
-              ? "Da går fremdriftsplanen over i sin neste rolle: et levende styringsverktøy."
-              : "That’s when the schedule becomes its next role: a living management tool."}
-          </p>
+          <h2 style={{ marginTop: 0 }}>{sRealityTitle}</h2>
+          <p style={{ marginTop: "0.5rem" }}>{sRealityP1}</p>
+          <p style={{ marginBottom: 0, marginTop: "0.75rem" }}>{sRealityP2}</p>
         </div>
 
         <div className="intro-card" style={{ gridColumn: "1 / -1" }}>
-          <h2 style={{ marginTop: 0 }}>
-            {isNo ? "Det levende styringsverktøyet" : "The living management tool"}
-          </h2>
+          <h2 style={{ marginTop: 0 }}>{sLivingTitle}</h2>
 
-          <p style={{ marginTop: "0.5rem" }}>
-            {isNo
-              ? "En levende fremdriftsplan brukes til å justere tidslinjer når noe endrer seg, se konsekvenser før beslutninger tas, kommunisere status og forventninger, og ta bedre beslutninger underveis."
-              : "A living schedule helps you adjust timelines when things change, see consequences before decisions are made, communicate status and expectations, and make better decisions along the way."}
-          </p>
+          <p style={{ marginTop: "0.5rem" }}>{sLivingP1}</p>
 
-          <p style={{ marginTop: "0.75rem" }}>
-            {isNo ? "I stedet for å skape stress, gir planen trygghet:" : "Instead of creating stress, it creates safety:"}
-          </p>
+          <p style={{ marginTop: "0.75rem" }}>{sLivingLead}</p>
 
-          <p style={{ marginBottom: 0 }}>
-            {isNo
-              ? "Du ser hva som påvirkes – og hva som ikke gjør det."
-              : "You can see what’s affected—and what isn’t."}
-          </p>
+          <p style={{ marginBottom: 0 }}>{sLivingP2}</p>
         </div>
 
         <div className="intro-card" style={{ gridColumn: "1 / -1" }}>
-          <h2 style={{ marginTop: 0 }}>
-            {isNo ? "Hvem har nytte av fremdriftsplaner?" : "Who benefits from schedules?"}
-          </h2>
+          <h2 style={{ marginTop: 0 }}>{sWhoTitle}</h2>
 
-          <p style={{ marginTop: "0.5rem" }}>
-            {isNo
-              ? "En vanlig misforståelse er at fremdriftsplaner kun er for prosjektledere. I realiteten trengs de på mange nivåer og i mange fagfelt."
-              : "A common misconception is that schedules are only for project managers. In reality, they help across roles and industries."}
-          </p>
+          <p style={{ marginTop: "0.5rem" }}>{sWhoP1}</p>
 
-          <h3 style={{ marginTop: "1rem" }}>
-            {isNo ? "Bygg, industri og prosjektarbeid" : "Construction, industry, and project work"}
-          </h3>
+          <h3 style={{ marginTop: "1rem" }}>{sWhoBuildTitle}</h3>
           <ul style={{ marginTop: "0.5rem", paddingLeft: "1.25rem" }}>
-            <li>{isNo ? "Koordinering av aktiviteter" : "Coordination of activities"}</li>
-            <li>{isNo ? "Planlegging av rekkefølge og bemanning" : "Order and staffing planning"}</li>
-            <li>{isNo ? "Forutsigbar fremdrift" : "Predictable progress"}</li>
+            {sWhoBuildBullets.map((x, i) => (
+              <li key={`${i}-${x}`}>{x}</li>
+            ))}
           </ul>
 
-          <h3 style={{ marginTop: "1rem" }}>{isNo ? "IT og utvikling" : "IT and development"}</h3>
+          <h3 style={{ marginTop: "1rem" }}>{sWhoItTitle}</h3>
           <ul style={{ marginTop: "0.5rem", paddingLeft: "1.25rem" }}>
-            <li>{isNo ? "Sprintplanlegging" : "Sprint planning"}</li>
-            <li>{isNo ? "Leveranser og milepæler" : "Deliveries and milestones"}</li>
-            <li>{isNo ? "Avhengigheter mellom oppgaver" : "Dependencies between tasks"}</li>
+            {sWhoItBullets.map((x, i) => (
+              <li key={`${i}-${x}`}>{x}</li>
+            ))}
           </ul>
 
-          <h3 style={{ marginTop: "1rem" }}>
-            {isNo ? "Skoler og utdanning" : "Schools and education"}
-          </h3>
-          <p style={{ marginTop: "0.5rem" }}>
-            {isNo
-              ? "Fremdriftsplaner brukes her på flere nivåer: eiere og administrasjon planlegger skoleår, lærere strukturerer undervisning, og elever/studenter planlegger semester, oppgaver og eksamen."
-              : "Schedules are used at multiple levels: administration plans the year, teachers structure teaching, and students plan semesters, assignments, and exams."}
-          </p>
+          <h3 style={{ marginTop: "1rem" }}>{sWhoSchoolTitle}</h3>
+          <p style={{ marginTop: "0.5rem" }}>{sWhoSchoolBody}</p>
 
-          <h3 style={{ marginTop: "1rem" }}>{isNo ? "Helse og rehabilitering" : "Health and rehab"}</h3>
-          <p style={{ marginTop: "0.5rem" }}>
-            {isNo
-              ? "Progresjon over tid er helt sentralt: opptrening, rehabiliteringsløp og samhandling. En fremdriftsplan gir struktur og tydelige delmål – ofte avgjørende for motivasjon og mestring."
-              : "Progress over time is central: training, rehab programs, collaboration. A schedule gives structure and clear milestones—often key for motivation."}
-          </p>
+          <h3 style={{ marginTop: "1rem" }}>{sWhoHealthTitle}</h3>
+          <p style={{ marginTop: "0.5rem" }}>{sWhoHealthBody}</p>
 
-          <h3 style={{ marginTop: "1rem" }}>
-            {isNo ? "Privat og alternative bruksområder" : "Personal use"}
-          </h3>
+          <h3 style={{ marginTop: "1rem" }}>{sWhoPersonalTitle}</h3>
           <ul style={{ marginTop: "0.5rem", paddingLeft: "1.25rem" }}>
-            <li>{isNo ? "Flytting" : "Moving"}</li>
-            <li>{isNo ? "Oppussing" : "Renovation"}</li>
-            <li>{isNo ? "Arrangementer" : "Events"}</li>
-            <li>{isNo ? "Personlige mål og livsplanlegging" : "Personal goals and planning"}</li>
+            {sWhoPersonalBullets.map((x, i) => (
+              <li key={`${i}-${x}`}>{x}</li>
+            ))}
           </ul>
         </div>
 
         <div className="intro-card" style={{ gridColumn: "1 / -1" }}>
-          <h2 style={{ marginTop: 0 }}>{isNo ? "Hva har du å tjene på det?" : "What do you gain?"}</h2>
+          <h2 style={{ marginTop: 0 }}>{sGainTitle}</h2>
 
           <ul style={{ marginTop: "0.75rem", paddingLeft: "1.25rem" }}>
-            <li>{isNo ? "bedre kontroll" : "better control"}</li>
-            <li>{isNo ? "færre overraskelser" : "fewer surprises"}</li>
-            <li>{isNo ? "tydeligere kommunikasjon" : "clearer communication"}</li>
-            <li>{isNo ? "mindre stress" : "less stress"}</li>
-            <li>{isNo ? "høyere sannsynlighet for å lykkes" : "higher chance of success"}</li>
+            {sGainBullets.map((x, i) => (
+              <li key={`${i}-${x}`}>{x}</li>
+            ))}
           </ul>
 
-          <p style={{ marginBottom: 0, marginTop: "0.75rem" }}>
-            {isNo
-              ? "Og kanskje viktigst av alt: du går fra å reagere på problemer – til å forutse dem."
-              : "And perhaps most importantly: you go from reacting to problems to anticipating them."}
-          </p>
+          <p style={{ marginBottom: 0, marginTop: "0.75rem" }}>{sGainClose}</p>
         </div>
 
         <div className="intro-card" style={{ gridColumn: "1 / -1" }}>
-          <h2 style={{ marginTop: 0 }}>{isNo ? "Fra teori til praksis" : "From theory to practice"}</h2>
+          <h2 style={{ marginTop: 0 }}>{sPracticeTitle}</h2>
 
-          <p style={{ marginTop: "0.5rem" }}>
-            {isNo
-              ? "Vil du prøve dette i praksis? I dag finnes det enkle digitale verktøy som lar deg lage, justere og bruke fremdriftsplaner uten unødvendig kompleksitet."
-              : "Want to try this in practice? Today there are simple digital tools that let you create, adjust, and use schedules without unnecessary complexity."}
-          </p>
-
-          <p style={{ marginBottom: 0 }}>
-            {isNo
-              ? "Progress er ett av dem – laget for å være lett å ta i bruk, enten planen er statisk eller levende."
-              : "Progress is one of them—designed to be easy to start with, whether your plan is static or living."}
-          </p>
+          <p style={{ marginTop: "0.5rem" }}>{sPracticeP1}</p>
+          <p style={{ marginBottom: 0 }}>{sPracticeP2}</p>
 
           <div
             style={{
@@ -274,10 +232,10 @@ const ProgressFremdriftsplanPage: React.FC = () => {
             }}
           >
             <a className="hero-cta" href={LINKS.progress} rel="noopener noreferrer">
-              {isNo ? "Prøv Progress gratis" : "Try Progress for free"}
+              {sPracticeCtaTry}
             </a>
             <Link className="hero-cta" to="/progress/priser">
-              {isNo ? "Se priser" : "See pricing"}
+              {sPracticeCtaPrices}
             </Link>
           </div>
         </div>
