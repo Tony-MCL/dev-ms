@@ -146,15 +146,15 @@ const no = {
       bullets: {
         singleSource: "Én kilde til sannhet",
         singleSourceBody: "ingen dobbeltlogikk, ingen skjulte avvik.",
-        predictability: "Forutsigbarhet foran wow",
-        predictabilityBody: "design og teknikk må henge sammen – ellers bygges det ikke.",
-        respect: "Respekt for tid og hode",
-        respectBody: "alt som stjeler fokus uten å gi verdi regnes som en feil.",
+        predictability: "Forutsigbarhet fremfor effekter",
+        predictabilityBody: "design og teknikk må henge sammen, ellers fungerer det dårlig.",
+        respect: "Respekt for brukerens tid og fokus",
+        respectBody: "alt som stjeler fokus uten å gi verdi, velges bort.",
         realWork: "Bygget for ekte arbeid",
         realWorkBody: "også når det skal printes, dokumenteres og etterprøves.",
       },
       outro: "Resultatet skal føles rolig:",
-      outroEm: "det bare fungerer.",
+      outroEm: "det fungerer, og det er nok.",
     },
 
     deliver: {
@@ -168,7 +168,7 @@ const no = {
     direction: {
       title: "Produkter og retning",
       p1:
-        "Første produkt ut er Manage Progress: en ren Gantt-app med lav terskel og høy presisjon. Over tid kan flere verktøy komme – men aldri på bekostning av klarhet, struktur og reell nytte.",
+        "Første produkt ut er Manage Progress: en ren Gantt-app med lav terskel og høy presisjon. Over tid kan flere verktøy komme, men aldri på bekostning av klarhet, struktur og reell nytte.",
       linkLead: "Se produktet her:",
       linkCta: "Manage Progress →",
     },
@@ -190,7 +190,7 @@ const no = {
       p1:
         "Morning Coffee Labs bygger digitale arbeidsverktøy med lav terskel og høy presisjon. Enten det gjelder bestillingsutvikling eller idébanken er målet det samme: tydelig struktur, forutsigbar funksjonalitet og løsninger som tåler reell bruk over tid.",
       p2:
-        "Vi starter med et problem som faktisk koster tid, fokus eller kvalitet. Deretter gjør vi det om til en idé som kan testes og bygges. Til slutt leverer vi en løsning som er enkel å ta i bruk, lett å vedlikeholde – og tydelig i hva den gjør.",
+        "Vi starter med et problem som faktisk koster tid, fokus eller kvalitet. Deretter gjør vi det om til en idé som kan testes og bygges. Til slutt leverer vi en løsning som er enkel å ta i bruk, lett å vedlikeholde og tydelig i hva den gjør.",
       back: "← Tilbake til forsiden",
       contact: "Ta kontakt →",
     },
@@ -283,13 +283,13 @@ const no = {
     audience: {
       title: "Hvem dette passer for",
       body:
-        "Manage Progress passer for prosjektledere, tekniske miljøer og team som jobber prosjektbasert – og som trenger en plan som tåler endringer, kan dokumenteres og er enkel å ta med videre i møter og leveranser.",
+        "Manage Progress passer for prosjektledere, tekniske miljøer og team som jobber prosjektbasert og trenger en plan som tåler endringer, kan dokumenteres og er enkel å ta med videre i møter og leveranser.",
     },
 
     next: {
       title: "Videre",
       body:
-        "Manage Progress er del av det som over tid blir Manage System – et økosystem av små, selvstendige verktøy som kan fungere alene, men også sammen når behovet oppstår.",
+        "Manage Progress er del av det som over tid skal bli Manage System – et økosystem av små, selvstendige verktøy som også kan fungere sammen når behovet oppstår.",
       back: "← Tilbake til Morning Coffee Labs",
     },
   },
@@ -532,7 +532,7 @@ const no = {
       {
         factTitle: "Visuell plan som er lett å lese",
         factBody:
-          "Du får en plan som er enkel å presentere for andre – og enkel å forstå for deg selv. Målet er ro og oversikt, ikke mer administrasjon.",
+          "Du får en plan som er enkel å presentere for andre, og er enkel å forstå for deg selv. Målet er ro og oversikt, ikke mer administrasjon.",
         imgAlt: "Skjermbilde: Oversikt og lesbarhet",
         imgCaption: "Lesbarhet først: rolig layout som er enkel å dele.",
       },
@@ -541,14 +541,14 @@ const no = {
         factBody:
           "Planer blir aldri perfekte. Det viktige er at det går fort å oppdatere og justere, uten at du må “redesigne” alt fra bunnen av.",
         imgAlt: "Skjermbilde: Utskrift / deling",
-        imgCaption: "Bygget for deling og utskrift – uten at det blir rot.",
+        imgCaption: "Bygget for deling og utskrift uten at det blir rot.",
       },
       {
         factTitle: "Bygget for utskrift og deling",
         factBody:
-          "En plan har ofte en mottaker. Progress er laget med tanke på at du skal kunne vise, dele og skrive ut – uten å miste lesbarhet.",
+          "En plan har ofte en mottaker. Progress er laget med tanke på at du skal kunne vise, dele og skrive ut uten å miste lesbarhet.",
         imgAlt: "Skjermbilde: Detaljer og flyt",
-        imgCaption: "Detaljer når du trenger det – uten å miste flyten.",
+        imgCaption: "Detaljer når du trenger det uten å miste flyten.",
       },
     ],
   },
@@ -556,16 +556,16 @@ const no = {
   progressHero: {
     title: "Fremdriftsplanlegging som gir ro",
     tagline:
-      "En god fremdriftsplan er ikke et nødvendig onde. Den er et verktøy for å skape oversikt, forutsigbarhet og fremdrift – før stresset tar over.",
+      "En god fremdriftsplan er ikke et nødvendig onde. Den er et verktøy for å skape oversikt, forutsigbarhet og fremdrift, slik at stresset ikke tar over.",
     lead1:
-      "Når flere oppgaver henger sammen, tid er begrenset og mennesker er avhengige av hverandre, oppstår det samme behovet: å se helheten og forstå rekkefølgen.",
+      "Når flere oppgaver henger sammen, tid er begrenset og mennesker og oppgaver er avhengige av hverandre, oppstår det samme behovet: å se helheten og forstå rekkefølgen.",
     lead2:
-      "En fremdriftsplan gjør arbeidsmengden konkret. Den synliggjør avhengigheter, avklarer hva som må skje først – og hva som kan gjøres parallelt.",
+      "En fremdriftsplan gjør arbeidsmengden konkret. Den synliggjør avhengigheter, avklarer hva som må skje først, hva som kan gjøres parallelt, og hva som kan eller må vente.",
     lead3:
       "Riktig brukt blir planen et styringsverktøy: du ser konsekvensene før du tar beslutninger, og du kan justere underveis uten å miste kontroll.",
     articles: {
       lead:
-        "Vil du lese litt mer før du går videre? Her er to korte artikler som forklarer hva en fremdriftsplan er – og hvordan du bruker den effektivt:",
+        "Vil du lese litt mer før du går videre? Her er to korte artikler som forklarer hva en fremdriftsplan er og hvordan du bruker den effektivt:",
       ctaWhat: "Hva er en fremdriftsplan? →",
       ctaHow: "Hvordan bruke planen effektivt →",
     },
@@ -574,7 +574,7 @@ const no = {
   progressSell: {
     title: "Fra innsikt til praksis",
     lead:
-      "Når du først har en plan, handler det om å holde den levende: justere når virkeligheten endrer seg, se konsekvenser raskt, og dele status tydelig. Manage Progress er laget for akkurat dette – uten støy, uten tunge oppsett.",
+      "Når du først har en plan, handler det om å holde den levende: justere når virkeligheten endrer seg, se konsekvenser raskt, og dele status tydelig. Manage Progress er laget for akkurat dette, uten støy - uten tunge oppsett.",
     ctaOverview: "Les mer om Progress",
     ctaApp: "Åpne Progress",
     ctaPrices: "Se priser og lisens",
@@ -584,11 +584,11 @@ const no = {
     hero: {
       tagline: "Fremdriftsplanlegging uten støy.",
       lead1:
-        "Progress er et enkelt verktøy for å planlegge det som faktisk må bli gjort – uten overflødige funksjoner, kompliserte oppsett eller unødvendige begreper.",
+        "Progress er et enkelt verktøy for å planlegge det som faktisk må bli gjort, uten overflødige funksjoner, kompliserte oppsett eller unødvendige begreper.",
       lead2:
-        "En fremdriftsplan handler om oversikt, prioritering og å komme i mål. Den har alltid vært en naturlig del av hvordan mennesker planlegger arbeid – lenge før det fantes metoder, verktøy og begreper for prosjektstyring.",
+        "En fremdriftsplan handler om oversikt, prioritering og å komme i mål. Planlegging har alltid vært en naturlig del av hvordan mennesker utfører arbeid – lenge før det fantes metoder, verktøy og begreper for prosjektstyring ble arbeid planlagt og mentale fremdriftsplaner utarbeidet.",
       lead3:
-        "Når noe skal bygges, læres eller gjennomføres over tid, oppstår det samme behovet igjen og igjen: å se helheten, forstå rekkefølgen, og vite når noe faktisk er ferdig.",
+        "Når noe skal bygges, læres eller gjennomføres over tid, oppstår det samme behovet igjen og igjen: å se helheten,å se deloppgaver, forstå rekkefølgen, og vite når noe faktisk er ferdig.",
       lead4:
         "Progress er laget for å støtte dette behovet i praksis – enten det er et prosjekt, et semester, et salgsarbeid eller en privat plan.",
     },
@@ -597,14 +597,14 @@ const no = {
       title: "Hva gir en fremdriftsplan deg egentlig?",
       lead: "Mange vet at de burde planlegge. Færre vet hva de faktisk får igjen for det.",
       bullets: [
-        { title: "Oversikt", body: "Hva skal gjøres – og i hvilken rekkefølge." },
-        { title: "Forutsigbarhet", body: "Hva skjer nå, og hva kommer senere." },
-        { title: "Prioritering", body: "Hva er viktig, og hva kan vente." },
+        { title: "Oversikt", body: "Hva skal gjøres? Og i hvilken rekkefølge?" },
+        { title: "Forutsigbarhet", body: "Hva skjer nå, og hva kommer senere?" },
+        { title: "Prioritering", body: "Hva er viktig, og hva kan vente?" },
         { title: "Fremdrift", body: "En tydelig følelse av å komme videre." },
         { title: "Beslutningsgrunnlag", body: "Du ser konsekvensene før du tar valgene." },
       ],
       close:
-        "Progress hjelper deg å få dette på plass i praksis – ved å gjøre fremdrift synlig, forståelig og enkel å justere underveis.\n\nDet samme behovet dukker opp i mange ulike situasjoner. Under ser du noen typiske eksempler.",
+        "Progress hjelper deg å få dette på plass i praksis ved å gjøre fremdrift synlig, forståelig og enkel å justere underveis.\n\nDet samme behovet dukker opp i mange ulike situasjoner. Under ser du noen typiske eksempler.",
     },
 
     tiles: [
@@ -656,7 +656,7 @@ const no = {
     readMore: {
       title: "Les mer",
       lead:
-        "Her er to korte artikler som forklarer hva en fremdriftsplan er – og hvordan du bruker den effektivt i praksis:",
+        "Her er to korte artikler som forklarer hva en fremdriftsplan er, og hvordan du bruker den effektivt i praksis:",
       ctaWhat: "Hva er en fremdriftsplan? →",
       ctaHow: "Hvordan bruke planen effektivt →",
     },
@@ -691,7 +691,7 @@ const no = {
       trial: {
         title: "Prøv Fullversjon gratis i 10 dager",
         body:
-          "Du kan teste full funksjonalitet i 10 dager – helt gratis. Det eneste du trenger å gjøre er å registrere deg.",
+          "Du kan teste full funksjonalitet i 10 dager helt gratis. Det eneste du trenger å gjøre er å registrere deg.",
         cta: "Start prøveperiode →",
       },
     },
@@ -699,7 +699,7 @@ const no = {
     pro: {
       title: "Fullversjon",
       lead:
-        "For deg som bruker Progress jevnlig – spesielt hvis du jobber i flere prosjekter samtidig og vil ha full flyt med skylagring og eksport.",
+        "For deg som bruker Progress jevnlig, spesielt hvis du jobber i flere prosjekter samtidig og vil ha full flyt med skylagring og eksport.",
 
       whatTitle: "Dette får du i fullversjonen",
       what: [
@@ -727,13 +727,13 @@ const no = {
     fremdriftsplan: {
       meta: {
         title:
-          "Hva er en fremdriftsplan – og hvorfor er den et av de viktigste verktøyene du kan lære deg?",
+          "Hva er en fremdriftsplan og hvorfor er den et av de viktigste verktøyene du kan lære deg?",
         description:
           "Lær hva en fremdriftsplan er, hvorfor den gir kontroll og forutsigbarhet, og hvordan den går fra statisk plan til levende styringsverktøy.",
       },
       hero: {
         tagline:
-          "Hvis du noen gang har vært med på et prosjekt som startet med gode intensjoner, men endte i stress, misforståelser og forsinkelser, er sjansen stor for at én ting manglet: en tydelig fremdriftsplan.",
+          "Hvis du noen gang har vært med på et prosjekt som startet med gode intensjoner, men endte i stress, misforståelser og forsinkelser, er sjansen stor for at fremdriftsplanen enten manglet – eller ikke ble brukt slik den var ment. Altfor ofte blir fremdriftsplaner laget for arkivet, ikke for hverdagen, fordi man ikke forstår verdien av dem eller hvordan de faktisk skal brukes i praksis.",
       },
       cta: {
         back: "← Tilbake til Progress",
@@ -749,7 +749,7 @@ const no = {
         why: {
           title: "Hvorfor trenger vi fremdriftsplaner?",
           p1:
-            "Et prosjekt – enten det er bygging av en skole, utvikling av programvare, planlegging av et skoleår eller rehabilitering etter skade – består alltid av mange oppgaver, begrenset tid, begrensede ressurser og mennesker som er avhengige av hverandre.",
+            "Et prosjekt – enten det er bygging av en skole, utvikling av programvare, planlegging av et skoleår eller rehabilitering etter skade, består alltid av mange oppgaver som er tidsbegrenset, med begrensede ressurser, og både mennesker og oppgaver som er avhengige av hverandre.",
           lead: "Uten en fremdriftsplan skjer ofte det samme:",
           bullets: [
             "Oppgaver blir gjort i feil rekkefølge",
@@ -758,12 +758,12 @@ const no = {
             "Ingen har full oversikt",
           ],
           close:
-            "En fremdriftsplan tvinger oss til å tenke gjennom prosjektet før vi starter. Den gjør det mulig å stille de riktige spørsmålene tidlig, når det fortsatt er enkelt å justere.",
+            "En fremdriftsplan tvinger oss til å tenke gjennom prosjektet før vi starter. Den gjør det mulig å stille de riktige spørsmålene tidlig nok til at det fortsatt er enkelt å justere dersom svarene ikke stemmer med forventningene.",
         },
         static: {
           title: "Planleggingsverktøyet (den statiske fasen)",
           p1:
-            "I mange prosjekter starter fremdriftsplanen som et statisk planleggingsverktøy. Denne fasen undervurderes ofte – men er helt avgjørende.",
+            "I mange prosjekter starter fremdriftsplanen som et statisk planleggingsverktøy. Denne fasen undervurderes ofte, men er helt avgjørende for et godt sluttresultat.",
           lead: "Her brukes planen til å:",
           bullets: [
             "bryte prosjektet ned i konkrete oppgaver",
@@ -774,12 +774,12 @@ const no = {
           p2:
             "Derfor brukes fremdriftsplaner ofte som vedlegg i tilbud og anbud, beslutningsgrunnlag for ledelse og eiere, og en felles referanse i tidlig planlegging.",
           p3:
-            "Det er helt vanlig – og helt riktig – at planen i denne fasen deles som PDF. Den fungerer da som et fast bilde av hvordan prosjektet er tenkt gjennomført, gitt dagens forutsetninger.",
+            "Det er helt vanlig – og helt riktig – at planen i denne fasen deles som et statisk PDF-dokument. Den fungerer da som et fast bilde av hvordan prosjektet er tenkt gjennomført, gitt dagens forutsetninger.",
         },
         reality: {
           title: "Når planen møter virkeligheten",
           p1:
-            "Prosjekter lever. Når gjennomføringen starter, melder virkeligheten seg: leveranser blir forsinket, ressurser endres, nye oppgaver dukker opp, noe tar kortere – annet tar lengre.",
+            "Alle prosjekter er levende. Når gjennomføringen starter, melder virkeligheten seg: leveranser blir forsinket, ressurser endres, nye oppgaver dukker opp, noe tar kortere tid enn ntatt, annet tar lengre tid.",
           p2: "Da går fremdriftsplanen over i sin neste rolle: et levende styringsverktøy.",
         },
         living: {
@@ -825,7 +825,7 @@ const no = {
             "mindre stress",
             "høyere sannsynlighet for å lykkes",
           ],
-          close: "Og kanskje viktigst av alt: du går fra å reagere på problemer – til å forutse dem.",
+          close: "Og kanskje viktigst av alt: du går fra å reagere på problemer til å forutsi dem – og det endrer hele dynamikken i prosjektet.",
         },
         practice: {
           title: "Fra teori til praksis",
@@ -840,7 +840,7 @@ const no = {
 
     bruk: {
       meta: {
-        title: "Hvordan bruke en fremdriftsplan effektivt – og hva du faktisk har å vinne på det",
+        title: "Hvordan bruke en fremdriftsplan effektivt og hva du faktisk har å vinne på det",
         description:
           "Praktisk guide: bryt ned prosjektet, avklar avhengigheter, sett realistiske estimater, og bruk planen aktivt som styrings- og kommunikasjonsverktøy.",
       },
@@ -856,15 +856,15 @@ const no = {
         step1: {
           title: "Første steg: Forstå hva prosjektet faktisk består av",
           p1:
-            "Det første – og kanskje viktigste – steget i all fremdriftsplanlegging er å bryte prosjektet ned. Store prosjekter feiler sjelden fordi én oppgave er vanskelig. De feiler fordi oppgavene er for grovt definert, sammenhenger ikke er tydelige, og ingen ser helheten.",
+            "Det første – og kanskje viktigste – steget i all fremdriftsplanlegging er å bryte prosjektet ned i hoved- og deloppgaver. Store prosjekter feiler sjelden fordi én oppgave er vanskelig. De feiler fordi oppgavene er for grovt definert, sammenhenger ikke er tydelige, og ingen ser helheten.",
           lead: "En god plan starter med spørsmålet:",
           quote: "Hva må faktisk gjøres for at prosjektet skal bli ferdig?",
           bullets: ["dele prosjektet opp i håndterbare oppgaver", "definere milepæler", "skille mellom hovedoppgaver og deloppgaver"],
         },
         deps: {
-          title: "Rekkefølge og avhengigheter – kjernen i god planlegging",
+          title: "Rekkefølge og avhengigheter; kjernen i god planlegging",
           p1:
-            "Noen oppgaver kan utføres parallelt. Andre må vente til noe annet er ferdig. Dette er avhengigheter – og det er her mange planer blir for optimistiske.",
+            "Noen oppgaver kan utføres parallelt. Andre må vente til noe annet er ferdig. Dette er avhengigheter, og det er her mange planer blir for optimistiske.",
           bullets: [
             "kartlegge hva som må skje før noe annet",
             "identifisere kritiske oppgaver",
@@ -881,20 +881,20 @@ const no = {
         static: {
           title: "Den statiske planen – grunnmuren",
           p1:
-            "I starten brukes planen ofte som et statisk dokument. Dette er helt riktig – og helt nødvendig. Den brukes som beslutningsgrunnlag, i tilbud/anbud, for ressursvurdering og kommunikasjon med interessenter.",
+            "I starten brukes planen ofte som et statisk dokument. Dette er både riktig og nødvendig. Den brukes som beslutningsgrunnlag, i tilbud/anbud, for ressursvurdering og kommunikasjon med interessenter.",
           p2:
             "En godt gjennomarbeidet statisk plan gir trygghet: “Vi vet hva vi skal gjøre – og hvorfor.”",
         },
         execution: {
           title: "Når gjennomføringen starter: Bruk planen aktivt",
           p1:
-            "Når prosjektet går fra planlegging til utførelse handler det om hva som faktisk skjer – og hva konsekvensene blir. Gode prosjektledere bruker planen til å justere underveis, vurdere konsekvenser før beslutninger tas, og kommunisere endringer tydelig.",
+            "Når prosjektet går fra planlegging til utførelse handler det om hva som faktisk skjer – og hva konsekvensene blir. Gode prosjektledere bruker planen til å justere underveis, vurderer konsekvenser før beslutninger tas, og kommuniserer endringer tydelig.",
           bullets: ["justere underveis", "vurdere konsekvenser før beslutninger tas", "kommunisere endringer tydelig"],
         },
         comms: {
           title: "Fremdriftsplanen som kommunikasjonsverktøy",
           p1:
-            "En god plan skaper felles forståelse, reduserer misforståelser og gjør forventninger tydelige. Når alle ser samme fremdrift, blir samarbeid enklere – og konfliktnivået lavere.",
+            "En god plan skaper felles forståelse, reduserer misforståelser og gjør forventninger tydelige. Når alle ser samme fremdriftsplan, blir samarbeid enklere og konfliktnivået lavere.",
           p2:
             "Prosjekter som har en plan, men ikke bruker den, ender ofte i ad hoc-endringer og brannslukking. Ironisk nok er det nettopp da man sier: “Vi har ikke tid til å oppdatere planen.”",
         },
