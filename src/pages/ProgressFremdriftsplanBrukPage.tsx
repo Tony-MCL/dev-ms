@@ -1,3 +1,4 @@
+// src/pages/ProgressFremdriftsplanBrukPage.tsx
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useI18n } from "../i18n/useI18n";
@@ -7,7 +8,9 @@ function setMeta(title: string, description: string) {
   if (typeof document === "undefined") return;
   document.title = title;
 
-  let meta = document.querySelector('meta[name="description"]') as HTMLMetaElement | null;
+  let meta = document.querySelector(
+    'meta[name="description"]'
+  ) as HTMLMetaElement | null;
   if (!meta) {
     meta = document.createElement("meta");
     meta.name = "description";
@@ -32,11 +35,13 @@ const ProgressFremdriftsplanBrukPage: React.FC = () => {
   const sStep1P1 = t<string>("progressArticles.bruk.sections.step1.p1");
   const sStep1Lead = t<string>("progressArticles.bruk.sections.step1.lead");
   const sStep1Quote = t<string>("progressArticles.bruk.sections.step1.quote");
-  const sStep1Bullets = t<string[]>("progressArticles.bruk.sections.step1.bullets") || [];
+  const sStep1Bullets =
+    t<string[]>("progressArticles.bruk.sections.step1.bullets") || [];
 
   const sDepsTitle = t<string>("progressArticles.bruk.sections.deps.title");
   const sDepsP1 = t<string>("progressArticles.bruk.sections.deps.p1");
-  const sDepsBullets = t<string[]>("progressArticles.bruk.sections.deps.bullets") || [];
+  const sDepsBullets =
+    t<string[]>("progressArticles.bruk.sections.deps.bullets") || [];
   const sDepsClose = t<string>("progressArticles.bruk.sections.deps.close");
 
   const sEstTitle = t<string>("progressArticles.bruk.sections.estimates.title");
@@ -49,7 +54,8 @@ const ProgressFremdriftsplanBrukPage: React.FC = () => {
 
   const sExecTitle = t<string>("progressArticles.bruk.sections.execution.title");
   const sExecP1 = t<string>("progressArticles.bruk.sections.execution.p1");
-  const sExecBullets = t<string[]>("progressArticles.bruk.sections.execution.bullets") || [];
+  const sExecBullets =
+    t<string[]>("progressArticles.bruk.sections.execution.bullets") || [];
 
   const sCommsTitle = t<string>("progressArticles.bruk.sections.comms.title");
   const sCommsP1 = t<string>("progressArticles.bruk.sections.comms.p1");
@@ -74,28 +80,7 @@ const ProgressFremdriftsplanBrukPage: React.FC = () => {
         <p className="fs-tagline" style={{ maxWidth: 980 }}>
           {heroTagline}
         </p>
-
-        <div
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            gap: "0.8rem",
-            marginTop: "1rem",
-            alignItems: "center",
-          }}
-        >
-          <Link className="hero-cta" to="/progress/fremdriftsplan">
-            {ctaBack}
-          </Link>
-
-          <a className="hero-cta" href={LINKS.progress} rel="noopener noreferrer">
-            {ctaOpen}
-          </a>
-
-          <Link className="hero-cta" to="/progress/priser">
-            {ctaPrices}
-          </Link>
-        </div>
+        {/* (Bevisst) Ingen knapper i toppen */}
       </section>
 
       <section className="intro-grid two-columns" style={{ marginTop: 0 }}>
@@ -168,6 +153,7 @@ const ProgressFremdriftsplanBrukPage: React.FC = () => {
 
           <p style={{ marginTop: "0.5rem" }}>{sPayoffP1}</p>
 
+          {/* Knapper flyttet til bunn (her, som siste blokk) */}
           <div
             style={{
               display: "flex",
@@ -177,15 +163,33 @@ const ProgressFremdriftsplanBrukPage: React.FC = () => {
               alignItems: "center",
             }}
           >
-            <a className="hero-cta" href={LINKS.progress} rel="noopener noreferrer">
-              {bottomTry}
-            </a>
-            <Link className="hero-cta" to="/progress/oversikt">
-              {bottomScreens}
+            <Link className="hero-cta" to="/progress/fremdriftsplan">
+              {ctaBack}
             </Link>
+
+            <a
+              className="hero-cta"
+              href={LINKS.progress}
+              rel="noopener noreferrer"
+            >
+              {ctaOpen}
+            </a>
+
+            <Link className="hero-cta" to="/progress/priser">
+              {ctaPrices}
+            </Link>
+
             <Link className="hero-cta" to="/progress">
               {bottomBack}
             </Link>
+          </div>
+
+          {/* Hvis du ønsker å beholde disse "bottomCtas" (screens/try/back) visuelt,
+              kan de evt. flyttes til egen seksjon – men per ønsket ditt holder vi
+              fokus på tilbake/åpne/priser/tilbake. */}
+          <div style={{ display: "none" }}>
+            {bottomTry}
+            {bottomScreens}
           </div>
         </div>
       </section>
