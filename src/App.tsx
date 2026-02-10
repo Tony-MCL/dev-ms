@@ -14,6 +14,18 @@ import ProgressAppPage from "./pages/ProgressAppPage";
 import ProgressFremdriftsplanPage from "./pages/ProgressFremdriftsplanPage";
 import ProgressFremdriftsplanBrukPage from "./pages/ProgressFremdriftsplanBrukPage";
 
+const ScrollToTop: React.FC = () => {
+  const { pathname, search, hash } = useLocation();
+
+  useEffect(() => {
+    // Scroll til topp ved vanlig rutenavigasjon.
+    // Hvis du senere vil støtte #anker-navigasjon, kan vi gjøre dette smartere.
+    if (hash) return;
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, [pathname, search, hash]);
+
+  return null;
+};
 const App: React.FC = () => {
   return (
     <div className="app-shell">
