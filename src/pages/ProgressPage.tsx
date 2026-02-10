@@ -60,20 +60,19 @@ const ProgressPage: React.FC = () => {
           style={{
             display: "flex",
             flexWrap: "wrap",
-            gap: "0.8rem",
+            gap: "1.25rem",
             marginTop: "0.75rem",
             alignItems: "center",
           }}
         >
-          <Link className="hero-cta" to="/progress/fremdriftsplan">
+          <Link className="hero-link" to="/progress/fremdriftsplan">
             {articleCtaWhat}
           </Link>
-
-          <Link className="hero-cta" to="/progress/fremdriftsplan-bruk">
+        
+          <Link className="hero-link" to="/progress/fremdriftsplan-bruk">
             {articleCtaHow}
           </Link>
         </div>
-      </section>
 
       {/* ================= SALGSFLIS ================= */}
       <section className="intro-grid two-columns" style={{ marginTop: 0 }}>
