@@ -779,7 +779,7 @@ const no = {
         reality: {
           title: "Når planen møter virkeligheten",
           p1:
-            "Alle prosjekter er levende. Når gjennomføringen starter, melder virkeligheten seg: leveranser blir forsinket, ressurser endres, nye oppgaver dukker opp, noe tar kortere tid enn ntatt, annet tar lengre tid.",
+            "Alle prosjekter er levende. Når gjennomføringen starter, melder virkeligheten seg: leveranser blir forsinket, ressurser endres, nye oppgaver dukker opp, noe tar kortere tid enn antatt, annet tar lengre tid.",
           p2: "Da går fremdriftsplanen over i sin neste rolle: et levende styringsverktøy.",
         },
         living: {
