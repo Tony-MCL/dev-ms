@@ -619,6 +619,14 @@ progress: {
     appBtn: "Åpne Progress",
     pricesBtn: "Se priser og lisens",
   },
+  readMore: {
+    title: "Les mer",
+    lead:
+      "Her er to korte artikler som forklarer hva en fremdriftsplan er – og hvordan du bruker den effektivt i praksis:",
+    ctaWhat: "Hva er en fremdriftsplan? →",
+    ctaHow: "Hvordan bruke planen effektivt →",
+  },
+
 },
 progressPricing: {
   title: "Priser og lisens",
@@ -634,6 +642,194 @@ progressPricing: {
     tryAgain: "Prøv igjen",
   },
 
+  progressArticles: {
+    fremdriftsplan: {
+      meta: {
+        title:
+          "Hva er en fremdriftsplan – og hvorfor er den et av de viktigste verktøyene du kan lære deg?",
+        description:
+          "Lær hva en fremdriftsplan er, hvorfor den gir kontroll og forutsigbarhet, og hvordan den går fra statisk plan til levende styringsverktøy.",
+      },
+      hero: {
+        tagline:
+          "Hvis du noen gang har vært med på et prosjekt som startet med gode intensjoner, men endte i stress, misforståelser og forsinkelser, er sjansen stor for at én ting manglet: en tydelig fremdriftsplan.",
+      },
+      cta: {
+        back: "← Tilbake til Progress",
+        openApp: "Åpne Progress-appen",
+        next: "Videre: Bruk planen effektivt →",
+      },
+      sections: {
+        what: {
+          title: "Hva er en fremdriftsplan?",
+          body:
+            "En fremdriftsplan er i sin enkleste form en oversikt som viser hva som skal gjøres, i hvilken rekkefølge og når. Men i praksis er den langt mer enn bare en tidslinje. Riktig brukt er fremdriftsplanen et av de mest kraftfulle verktøyene vi har for å skape struktur, forutsigbarhet og kontroll – uansett fagfelt.",
+        },
+        why: {
+          title: "Hvorfor trenger vi fremdriftsplaner?",
+          p1:
+            "Et prosjekt – enten det er bygging av en skole, utvikling av programvare, planlegging av et skoleår eller rehabilitering etter skade – består alltid av mange oppgaver, begrenset tid, begrensede ressurser og mennesker som er avhengige av hverandre.",
+          lead: "Uten en fremdriftsplan skjer ofte det samme:",
+          bullets: [
+            "Oppgaver blir gjort i feil rekkefølge",
+            "Viktige aktiviteter blir glemt",
+            "Frister settes uten helhetlig vurdering",
+            "Ingen har full oversikt",
+          ],
+          close:
+            "En fremdriftsplan tvinger oss til å tenke gjennom prosjektet før vi starter. Den gjør det mulig å stille de riktige spørsmålene tidlig, når det fortsatt er enkelt å justere.",
+        },
+        static: {
+          title: "Planleggingsverktøyet (den statiske fasen)",
+          p1:
+            "I mange prosjekter starter fremdriftsplanen som et statisk planleggingsverktøy. Denne fasen undervurderes ofte – men er helt avgjørende.",
+          lead: "Her brukes planen til å:",
+          bullets: [
+            "bryte prosjektet ned i konkrete oppgaver",
+            "vurdere rekkefølge og avhengigheter",
+            "estimere tidsbruk",
+            "planlegge bemanning og ressurser",
+          ],
+          p2:
+            "Derfor brukes fremdriftsplaner ofte som vedlegg i tilbud og anbud, beslutningsgrunnlag for ledelse og eiere, og en felles referanse i tidlig planlegging.",
+          p3:
+            "Det er helt vanlig – og helt riktig – at planen i denne fasen deles som PDF. Den fungerer da som et fast bilde av hvordan prosjektet er tenkt gjennomført, gitt dagens forutsetninger.",
+        },
+        reality: {
+          title: "Når planen møter virkeligheten",
+          p1:
+            "Prosjekter lever. Når gjennomføringen starter, melder virkeligheten seg: leveranser blir forsinket, ressurser endres, nye oppgaver dukker opp, noe tar kortere – annet tar lengre.",
+          p2: "Da går fremdriftsplanen over i sin neste rolle: et levende styringsverktøy.",
+        },
+        living: {
+          title: "Det levende styringsverktøyet",
+          p1:
+            "En levende fremdriftsplan brukes til å justere tidslinjer når noe endrer seg, se konsekvenser før beslutninger tas, kommunisere status og forventninger, og ta bedre beslutninger underveis.",
+          lead: "I stedet for å skape stress, gir planen trygghet:",
+          p2: "Du ser hva som påvirkes – og hva som ikke gjør det.",
+        },
+        who: {
+          title: "Hvem har nytte av fremdriftsplaner?",
+          p1:
+            "En vanlig misforståelse er at fremdriftsplaner kun er for prosjektledere. I realiteten trengs de på mange nivåer og i mange fagfelt.",
+          build: {
+            title: "Bygg, industri og prosjektarbeid",
+            bullets: ["Koordinering av aktiviteter", "Planlegging av rekkefølge og bemanning", "Forutsigbar fremdrift"],
+          },
+          it: {
+            title: "IT og utvikling",
+            bullets: ["Sprintplanlegging", "Leveranser og milepæler", "Avhengigheter mellom oppgaver"],
+          },
+          school: {
+            title: "Skoler og utdanning",
+            body:
+              "Fremdriftsplaner brukes her på flere nivåer: eiere og administrasjon planlegger skoleår, lærere strukturerer undervisning, og elever/studenter planlegger semester, oppgaver og eksamen.",
+          },
+          health: {
+            title: "Helse og rehabilitering",
+            body:
+              "Progresjon over tid er helt sentralt: opptrening, rehabiliteringsløp og samhandling. En fremdriftsplan gir struktur og tydelige delmål – ofte avgjørende for motivasjon og mestring.",
+          },
+          personal: {
+            title: "Privat og alternative bruksområder",
+            bullets: ["Flytting", "Oppussing", "Arrangementer", "Personlige mål og livsplanlegging"],
+          },
+        },
+        gain: {
+          title: "Hva har du å tjene på det?",
+          bullets: [
+            "bedre kontroll",
+            "færre overraskelser",
+            "tydeligere kommunikasjon",
+            "mindre stress",
+            "høyere sannsynlighet for å lykkes",
+          ],
+          close: "Og kanskje viktigst av alt: du går fra å reagere på problemer – til å forutse dem.",
+        },
+        practice: {
+          title: "Fra teori til praksis",
+          p1:
+            "Vil du prøve dette i praksis? I dag finnes det enkle digitale verktøy som lar deg lage, justere og bruke fremdriftsplaner uten unødvendig kompleksitet.",
+          p2: "Progress er ett av dem – laget for å være lett å ta i bruk, enten planen er statisk eller levende.",
+          ctaTry: "Prøv Progress gratis",
+          ctaPrices: "Se priser",
+        },
+      },
+    },
+  
+    bruk: {
+      meta: {
+        title: "Hvordan bruke en fremdriftsplan effektivt – og hva du faktisk har å vinne på det",
+        description:
+          "Praktisk guide: bryt ned prosjektet, avklar avhengigheter, sett realistiske estimater, og bruk planen aktivt som styrings- og kommunikasjonsverktøy.",
+      },
+      hero: {
+        tagline: "Å lage en fremdriftsplan er én ting. Å bruke den riktig er noe helt annet.",
+      },
+      cta: {
+        back: "← Tilbake: Hva er en fremdriftsplan?",
+        openApp: "Åpne Progress-appen",
+        prices: "Se priser",
+      },
+      sections: {
+        step1: {
+          title: "Første steg: Forstå hva prosjektet faktisk består av",
+          p1:
+            "Det første – og kanskje viktigste – steget i all fremdriftsplanlegging er å bryte prosjektet ned. Store prosjekter feiler sjelden fordi én oppgave er vanskelig. De feiler fordi oppgavene er for grovt definert, sammenhenger ikke er tydelige, og ingen ser helheten.",
+          lead: "En god plan starter med spørsmålet:",
+          quote: "Hva må faktisk gjøres for at prosjektet skal bli ferdig?",
+          bullets: ["dele prosjektet opp i håndterbare oppgaver", "definere milepæler", "skille mellom hovedoppgaver og deloppgaver"],
+        },
+        deps: {
+          title: "Rekkefølge og avhengigheter – kjernen i god planlegging",
+          p1:
+            "Noen oppgaver kan utføres parallelt. Andre må vente til noe annet er ferdig. Dette er avhengigheter – og det er her mange planer blir for optimistiske.",
+          bullets: [
+            "kartlegge hva som må skje før noe annet",
+            "identifisere kritiske oppgaver",
+            "forstå hvilke forsinkelser som faktisk får konsekvenser",
+          ],
+          close: "Du går fra håp-basert planlegging til realistisk planlegging.",
+        },
+        estimates: {
+          title: "Tidsestimater: Fra magefølelse til struktur",
+          p1:
+            "Ingen forventer perfekte estimater. Men de bør være gjennomtenkte. Når tidsbruk settes inn i en plan blir antagelser synlige, uenigheter kommer frem tidlig, og risiko kan diskuteres før den inntreffer.",
+          p2: "Fremdriftsplanen tvinger oss til å være ærlige: Er dette realistisk – eller bare ønsketenkning?",
+        },
+        static: {
+          title: "Den statiske planen – grunnmuren",
+          p1:
+            "I starten brukes planen ofte som et statisk dokument. Dette er helt riktig – og helt nødvendig. Den brukes som beslutningsgrunnlag, i tilbud/anbud, for ressursvurdering og kommunikasjon med interessenter.",
+          p2:
+            "En godt gjennomarbeidet statisk plan gir trygghet: “Vi vet hva vi skal gjøre – og hvorfor.”",
+        },
+        execution: {
+          title: "Når gjennomføringen starter: Bruk planen aktivt",
+          p1:
+            "Når prosjektet går fra planlegging til utførelse handler det om hva som faktisk skjer – og hva konsekvensene blir. Gode prosjektledere bruker planen til å justere underveis, vurdere konsekvenser før beslutninger tas, og kommunisere endringer tydelig.",
+          bullets: ["justere underveis", "vurdere konsekvenser før beslutninger tas", "kommunisere endringer tydelig"],
+        },
+        comms: {
+          title: "Fremdriftsplanen som kommunikasjonsverktøy",
+          p1:
+            "En god plan skaper felles forståelse, reduserer misforståelser og gjør forventninger tydelige. Når alle ser samme fremdrift, blir samarbeid enklere – og konfliktnivået lavere.",
+          p2:
+            "Prosjekter som har en plan, men ikke bruker den, ender ofte i ad hoc-endringer og brannslukking. Ironisk nok er det nettopp da man sier: “Vi har ikke tid til å oppdatere planen.”",
+        },
+        payoff: {
+          title: "Gevinsten",
+          p1:
+            "Når fremdriftsplaner brukes riktig – fra planlegging til gjennomføring – blir prosjekter mer forutsigbare, endringer håndteres med ro, beslutninger tas på grunnlag av oversikt, stress reduseres, og kvaliteten øker. Du får kontroll nok til å styre prosjektet, i stedet for å bli styrt av det.",
+        },
+      },
+      bottomCtas: {
+        try: "Prøv Progress gratis",
+        screens: "Se skjermbilder",
+        back: "Tilbake til Progress",
+      },
+    },
+  },
   free: {
     title: "Gratisversjon",
     lead:
