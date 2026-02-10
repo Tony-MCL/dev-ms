@@ -30,8 +30,7 @@ const ProgressPage: React.FC = () => {
   const seeTitle = t<string>("progress.see.title");
   const seeLead = t<string>("progress.see.lead");
 
-  // NEW: read-more section linking to the two new pages
-  const readMoreTitle = t<string>("progress.readMore.title");
+  // Article links (in HERO)
   const readMoreLead = t<string>("progress.readMore.lead");
   const readMoreCtaWhat = t<string>("progress.readMore.ctaWhat");
   const readMoreCtaHow = t<string>("progress.readMore.ctaHow");
@@ -51,13 +50,34 @@ const ProgressPage: React.FC = () => {
         <p style={{ maxWidth: 980, marginTop: "0.75rem" }}>{heroLead3}</p>
         <p style={{ maxWidth: 980, marginTop: "0.75rem" }}>{heroLead4}</p>
 
+        {/* NEW: Articles (text + buttons) inside HERO */}
+        <p style={{ maxWidth: 980, marginTop: "1rem" }}>{readMoreLead}</p>
+
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            gap: "0.8rem",
+            marginTop: "0.75rem",
+            alignItems: "center",
+          }}
+        >
+          <Link className="hero-cta" to="/progress/fremdriftsplan">
+            {readMoreCtaWhat}
+          </Link>
+
+          <Link className="hero-cta" to="/progress/fremdriftsplan-bruk">
+            {readMoreCtaHow}
+          </Link>
+        </div>
+
         {/* CTA buttons */}
         <div
           style={{
             display: "flex",
             flexWrap: "wrap",
             gap: "0.8rem",
-            marginTop: "1rem",
+            marginTop: "1.25rem",
             alignItems: "center",
           }}
         >
@@ -116,31 +136,6 @@ const ProgressPage: React.FC = () => {
         <div className="intro-card" style={{ gridColumn: "1 / -1" }}>
           <h3 style={{ marginTop: 0 }}>{seeTitle}</h3>
           <p style={{ marginBottom: 0 }}>{seeLead}</p>
-        </div>
-
-        {/* NEW: links to the two new pages */}
-        <div className="intro-card" style={{ gridColumn: "1 / -1" }}>
-          <h3 style={{ marginTop: 0 }}>{readMoreTitle}</h3>
-
-          <p style={{ marginTop: "0.5rem" }}>{readMoreLead}</p>
-
-          <div
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              gap: "0.8rem",
-              marginTop: "0.75rem",
-              alignItems: "center",
-            }}
-          >
-            <Link className="hero-cta" to="/progress/fremdriftsplan">
-              {readMoreCtaWhat}
-            </Link>
-
-            <Link className="hero-cta" to="/progress/fremdriftsplan-bruk">
-              {readMoreCtaHow}
-            </Link>
-          </div>
         </div>
       </section>
     </main>
