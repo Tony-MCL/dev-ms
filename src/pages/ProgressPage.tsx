@@ -73,6 +73,7 @@ const ProgressPage: React.FC = () => {
             {articleCtaHow}
           </Link>
         </div>
+     </section>
 
       {/* ================= SALGSFLIS ================= */}
       <section className="intro-grid two-columns" style={{ marginTop: 0 }}>
