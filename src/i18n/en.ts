@@ -765,6 +765,181 @@ progressPricing: {
   footerNote:
     "Progress will continue to evolve. New features may later support an expanded license structure. The full version will never lose functionality.",
 },
+progressArticles: {
+  fremdriftsplan: {
+    meta: {
+      title: "What is a schedule – and why is it one of the most important tools you can learn?",
+      description:
+        "Learn what a schedule is, why it creates predictability and control, and how it evolves from a static plan into a living management tool.",
+    },
+    hero: {
+      tagline:
+        "If you've ever been in a project that started with good intentions but ended in stress, misunderstandings, and delays, chances are one thing was missing: a clear schedule.",
+    },
+    cta: {
+      back: "← Back to Progress",
+      openApp: "Open the Progress app",
+      next: "Next: Use it effectively →",
+    },
+    sections: {
+      what: {
+        title: "What is a schedule?",
+        body:
+          "A schedule is, at its simplest, an overview showing what needs to be done, in what order, and when. In practice it's far more than a timeline. Used well, it is one of the most powerful tools we have for structure, predictability, and control—regardless of domain.",
+      },
+      why: {
+        title: "Why do we need schedules?",
+        p1:
+          "A project—whether it's building a school, developing software, planning an academic year, or rehabilitation—always involves many tasks, limited time, limited resources, and people who depend on each other.",
+        lead: "Without a schedule, the same things tend to happen:",
+        bullets: [
+          "Tasks happen in the wrong order",
+          "Important activities are forgotten",
+          "Deadlines are set without a holistic view",
+          "No one has the full picture",
+        ],
+        close:
+          "A schedule forces us to think the project through before we start. It helps us ask the right questions early—when it's still easy to adjust.",
+      },
+      static: {
+        title: "The planning tool (the static phase)",
+        p1:
+          "In many projects, the schedule starts as a static planning tool. This phase is often underestimated—but it's crucial.",
+        lead: "Here it's used to:",
+        bullets: [
+          "break the project into concrete tasks",
+          "assess order and dependencies",
+          "estimate duration",
+          "plan staffing and resources",
+        ],
+        p2:
+          "That’s why schedules are often used as attachments in bids, as decision support for management and owners, and as a shared reference early on.",
+        p3:
+          "It’s common—and correct—for this phase to be shared as a PDF. It becomes a fixed snapshot of how the project is expected to run, given today's assumptions.",
+      },
+      reality: {
+        title: "When the plan meets reality",
+        p1:
+          "Projects are living. Once execution starts, reality shows up: deliveries slip, resources change, new tasks appear, some things take less time—others more.",
+        p2: "That’s when the schedule becomes its next role: a living management tool.",
+      },
+      living: {
+        title: "The living management tool",
+        p1:
+          "A living schedule helps you adjust timelines when things change, see consequences before decisions are made, communicate status and expectations, and make better decisions along the way.",
+        lead: "Instead of creating stress, it creates safety:",
+        p2: "You can see what’s affected—and what isn’t.",
+      },
+      who: {
+        title: "Who benefits from schedules?",
+        p1:
+          "A common misconception is that schedules are only for project managers. In reality, they help across roles and industries.",
+        build: {
+          title: "Construction, industry, and project work",
+          bullets: ["Coordination of activities", "Order and staffing planning", "Predictable progress"],
+        },
+        it: {
+          title: "IT and development",
+          bullets: ["Sprint planning", "Deliveries and milestones", "Dependencies between tasks"],
+        },
+        school: {
+          title: "Schools and education",
+          body:
+            "Schedules are used at multiple levels: administration plans the year, teachers structure teaching, and students plan semesters, assignments, and exams.",
+        },
+        health: {
+          title: "Health and rehab",
+          body:
+            "Progress over time is central: training, rehab programs, collaboration. A schedule gives structure and clear milestones—often key for motivation.",
+        },
+        personal: {
+          title: "Personal use",
+          bullets: ["Moving", "Renovation", "Events", "Personal goals and planning"],
+        },
+      },
+      gain: {
+        title: "What do you gain?",
+        bullets: ["better control", "fewer surprises", "clearer communication", "less stress", "higher chance of success"],
+        close: "And perhaps most importantly: you go from reacting to problems to anticipating them.",
+      },
+      practice: {
+        title: "From theory to practice",
+        p1:
+          "Want to try this in practice? Today there are simple digital tools that let you create, adjust, and use schedules without unnecessary complexity.",
+        p2: "Progress is one of them—designed to be easy to start with, whether your plan is static or living.",
+        ctaTry: "Try Progress for free",
+        ctaPrices: "See pricing",
+      },
+    },
+  },
 
+  bruk: {
+    meta: {
+      title: "How to use a schedule effectively – and what you actually gain from it",
+      description:
+        "Practical guide: break down work, clarify dependencies, estimate realistically, and use the schedule actively for management and communication.",
+    },
+    hero: {
+      tagline: "Creating a schedule is one thing. Using it well is another.",
+    },
+    cta: {
+      back: "← Back: What is a schedule?",
+      openApp: "Open the Progress app",
+      prices: "See pricing",
+    },
+    sections: {
+      step1: {
+        title: "Step one: Understand what the project really is",
+        p1:
+          "The first—and perhaps most important—step is breaking the project down. Big projects rarely fail because one task is hard. They fail because tasks are too coarse, relationships are unclear, and no one sees the whole.",
+        lead: "A good plan starts with the question:",
+        quote: "What actually needs to happen for the project to be finished?",
+        bullets: ["split the project into manageable tasks", "define milestones", "separate main tasks and subtasks"],
+      },
+      deps: {
+        title: "Order and dependencies—the core of good planning",
+        p1:
+          "Some tasks can run in parallel. Others must wait for something to finish. These are dependencies—and this is where many schedules get too optimistic.",
+        bullets: ["map what must happen before something else", "identify critical tasks", "understand which delays actually matter"],
+        close: "You move from hope-based planning to realistic planning.",
+      },
+      estimates: {
+        title: "Estimates: from gut feeling to structure",
+        p1:
+          "No one expects perfect estimates. But they should be thought through. When you put time into a schedule, assumptions become visible, disagreements surface early, and risk can be discussed before it happens.",
+        p2: "A schedule forces honesty: is this realistic—or wishful thinking?",
+      },
+      static: {
+        title: "The static plan—the foundation",
+        p1:
+          "Early on, the schedule is often a static document. This is correct—and necessary. It’s used for decision-making, bids, resource planning, and stakeholder communication.",
+        p2: "A well-crafted static plan gives confidence: “We know what we’ll do—and why.”",
+      },
+      execution: {
+        title: "When execution starts: use it actively",
+        p1:
+          "When a project moves into execution, it’s about what actually happens—and the consequences. Strong leaders use the schedule to adjust, assess impacts before decisions, and communicate changes clearly.",
+        bullets: ["adjust as you go", "assess consequences before deciding", "communicate changes clearly"],
+      },
+      comms: {
+        title: "The schedule as a communication tool",
+        p1:
+          "A good plan creates shared understanding, reduces misunderstandings, and makes expectations clear. When everyone sees the same progress, collaboration becomes easier and conflict drops.",
+        p2:
+          "Projects that have a plan but don't use it often end up in ad-hoc changes and firefighting. Ironically, that's when people say: “We don't have time to update the plan.”",
+      },
+      payoff: {
+        title: "The payoff",
+        p1:
+          "When schedules are used well—from planning through execution—projects become more predictable, changes are handled calmly, decisions are made with visibility, stress drops, and quality rises. You gain enough control to steer the project rather than being steered by it.",
+      },
+    },
+    bottomCtas: {
+      try: "Try Progress for free",
+      screens: "See screenshots",
+      back: "Back to Progress",
+    },
+  },
+},
 } as const;
 export default en;
