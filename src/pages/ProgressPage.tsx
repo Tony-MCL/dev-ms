@@ -9,16 +9,25 @@ type Tile = { title: string; body: string };
 const ProgressPage: React.FC = () => {
   const { t } = useI18n();
 
-  const heroTagline = t<string>("progress.hero.tagline");
-  const heroLead1 = t<string>("progress.hero.lead1");
-  const heroLead2 = t<string>("progress.hero.lead2");
-  const heroLead3 = t<string>("progress.hero.lead3");
-  const heroLead4 = t<string>("progress.hero.lead4");
+  /* ========= HERO (FAG / INNSIKT) ========= */
+  const heroTitle = t<string>("progressHero.title");
+  const heroTagline = t<string>("progressHero.tagline");
+  const heroLead1 = t<string>("progressHero.lead1");
+  const heroLead2 = t<string>("progressHero.lead2");
+  const heroLead3 = t<string>("progressHero.lead3");
 
-  const ctaMoreBtn = t<string>("progress.cta.moreBtn");
-  const ctaAppBtn = t<string>("progress.cta.appBtn");
-  const ctaPricesBtn = t<string>("progress.cta.pricesBtn");
+  const articleLead = t<string>("progressHero.articles.lead");
+  const articleCtaWhat = t<string>("progressHero.articles.ctaWhat");
+  const articleCtaHow = t<string>("progressHero.articles.ctaHow");
 
+  /* ========= SALG ========= */
+  const sellTitle = t<string>("progressSell.title");
+  const sellLead = t<string>("progressSell.lead");
+  const sellCtaOverview = t<string>("progressSell.ctaOverview");
+  const sellCtaApp = t<string>("progressSell.ctaApp");
+  const sellCtaPrices = t<string>("progressSell.ctaPrices");
+
+  /* ========= RESTEN (uendret) ========= */
   const whyTitle = t<string>("progress.why.title");
   const whyLead = t<string>("progress.why.lead");
   const whyBullets = t<WhyBullet[]>("progress.why.bullets") || [];
@@ -30,16 +39,11 @@ const ProgressPage: React.FC = () => {
   const seeTitle = t<string>("progress.see.title");
   const seeLead = t<string>("progress.see.lead");
 
-  // Article links (in HERO)
-  const readMoreLead = t<string>("progress.readMore.lead");
-  const readMoreCtaWhat = t<string>("progress.readMore.ctaWhat");
-  const readMoreCtaHow = t<string>("progress.readMore.ctaHow");
-
   return (
     <main className="page">
-      {/* HERO */}
+      {/* ================= HERO ================= */}
       <section className="fs-hero">
-        <h1>Manage Progress</h1>
+        <h1>{heroTitle}</h1>
 
         <p className="fs-tagline" style={{ maxWidth: 980 }}>
           {heroTagline}
@@ -48,10 +52,9 @@ const ProgressPage: React.FC = () => {
         <p style={{ maxWidth: 980 }}>{heroLead1}</p>
         <p style={{ maxWidth: 980, marginTop: "0.75rem" }}>{heroLead2}</p>
         <p style={{ maxWidth: 980, marginTop: "0.75rem" }}>{heroLead3}</p>
-        <p style={{ maxWidth: 980, marginTop: "0.75rem" }}>{heroLead4}</p>
 
-        {/* NEW: Articles (text + buttons) inside HERO */}
-        <p style={{ maxWidth: 980, marginTop: "1rem" }}>{readMoreLead}</p>
+        {/* Artikler (faglig fordypning) */}
+        <p style={{ maxWidth: 980, marginTop: "1.25rem" }}>{articleLead}</p>
 
         <div
           style={{
@@ -63,41 +66,48 @@ const ProgressPage: React.FC = () => {
           }}
         >
           <Link className="hero-cta" to="/progress/fremdriftsplan">
-            {readMoreCtaWhat}
+            {articleCtaWhat}
           </Link>
 
           <Link className="hero-cta" to="/progress/fremdriftsplan-bruk">
-            {readMoreCtaHow}
-          </Link>
-        </div>
-
-        {/* CTA buttons */}
-        <div
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            gap: "0.8rem",
-            marginTop: "1.25rem",
-            alignItems: "center",
-          }}
-        >
-          <Link className="hero-cta" to="/progress/oversikt">
-            {ctaMoreBtn}
-          </Link>
-
-          {/* Ekstern lenke til Progress-appen */}
-          <a className="hero-cta" href={LINKS.progress} rel="noopener noreferrer">
-            {ctaAppBtn}
-          </a>
-
-          <Link className="hero-cta" to="/progress/priser">
-            {ctaPricesBtn}
+            {articleCtaHow}
           </Link>
         </div>
       </section>
 
-      {/* WHY */}
+      {/* ================= SALGSFLIS ================= */}
       <section className="intro-grid two-columns" style={{ marginTop: 0 }}>
+        <div className="intro-card" style={{ gridColumn: "1 / -1" }}>
+          <h3 style={{ marginTop: 0 }}>{sellTitle}</h3>
+
+          <p style={{ marginTop: "0.5rem" }}>{sellLead}</p>
+
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: "0.8rem",
+              marginTop: "0.75rem",
+              alignItems: "center",
+            }}
+          >
+            <Link className="hero-cta" to="/progress/oversikt">
+              {sellCtaOverview}
+            </Link>
+
+            <a className="hero-cta" href={LINKS.progress} rel="noopener noreferrer">
+              {sellCtaApp}
+            </a>
+
+            <Link className="hero-cta" to="/progress/priser">
+              {sellCtaPrices}
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ================= WHY ================= */}
+      <section className="intro-grid two-columns">
         <div className="intro-card" style={{ gridColumn: "1 / -1" }}>
           <h3 style={{ marginTop: 0 }}>{whyTitle}</h3>
 
@@ -117,7 +127,7 @@ const ProgressPage: React.FC = () => {
         </div>
       </section>
 
-      {/* TILES */}
+      {/* ================= TILES ================= */}
       <section className="intro-grid two-columns">
         {tiles.map((tile) => (
           <div className="intro-card" key={tile.title}>
@@ -131,7 +141,7 @@ const ProgressPage: React.FC = () => {
         </div>
       </section>
 
-      {/* CTA (content only) */}
+      {/* ================= CTA (content only) ================= */}
       <section className="intro-grid two-columns">
         <div className="intro-card" style={{ gridColumn: "1 / -1" }}>
           <h3 style={{ marginTop: 0 }}>{seeTitle}</h3>
