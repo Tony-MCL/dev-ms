@@ -697,6 +697,13 @@ progress: {
     appBtn: "Open Progress",
     pricesBtn: "Pricing & license",
   },
+  readMore: {
+    title: "Read more",
+    lead:
+      "Here are two short articles explaining what a schedule is — and how to use it effectively in practice:",
+    ctaWhat: "What is a schedule? →",
+    ctaHow: "How to use it effectively →",
+  },
 },
 progressPricing: {
   title: "Pricing & license",
