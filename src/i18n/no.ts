@@ -47,7 +47,7 @@ const no = {
       tagline:
         "Digitale verktøy for struktur, oversikt og gjennomføring – bygget for virkeligheten, ikke for demoer.",
       sub:
-        "Her prioriteres tydelig struktur, forutsigbar funksjonalitet og verktøy som er enkle å ta i bruk – også når behovene vokser. Løsninger laget for daglig bruk, under reelle rammer.",
+        "Her prioriteres tydelig struktur, forutsigbar funksjonalitet og verktøy som er enkle å ta i bruk, også når behovene vokser. Løsninger laget for daglig bruk, under reelle rammer.",
     },
 
     sections: {
@@ -60,7 +60,7 @@ const no = {
       progress: {
         title: "Manage Progress",
         body:
-          "Manage Progress er et lettvekts verktøy for planlegging og oppfølging av prosjekter. Det er laget for å gi rask oversikt, tydelig struktur og kontroll – uten tunge oppsett, komplekse begreper eller unødvendige valg.",
+          "Manage Progress er et brukervennlig verktøy for planlegging og oppfølging av prosjekter. Det er laget for å gi rask oversikt, tydelig struktur og kontroll uten tunge oppsett, komplekse begreper eller unødvendige valg.",
         cta: "Se Progress →",
         launchNote: "(lanseres 1. februar)",
         contactCta: "Spørsmål? Ta kontakt →",
@@ -69,14 +69,14 @@ const no = {
       services: {
         title: "Fra utfordring til løsning",
         body:
-          "Vi bygger verktøy som starter i en reell utfordring, formes som en tydelig idé – og ender som en løsning som fungerer i praksis. Du kan bestille en app dere eier, eller dele en idé som kan bli et MCL-produkt.",
+          "Vi bygger verktøy som starter i en reell utfordring, formes som en tydelig idé og ender som en løsning som fungerer i praksis. Du kan bestille en app dere eier, eller dele en idé som kan bli et MCL-produkt.",
         cta: "Se tjenester og idébank →",
       },
 
       documentation: {
         title: "Struktur og dokumentasjon",
         body:
-          "Løsninger som gjør det enkelt å følge opp arbeid, beslutninger og endringer – og hente det frem igjen når det faktisk trengs.",
+          "Løsninger som gjør det enkelt å følge opp arbeid, beslutninger og endringer, og hente det frem igjen når det faktisk trengs.",
       },
 
       realWorld: {
@@ -90,22 +90,22 @@ const no = {
       singleSource: {
         title: "Én kilde til sannhet",
         body:
-          "Ingen dobbeltlogikk, ingen skjult magi. Det som gjelder, gjelder – og kan forklares, feilsøkes og stoles på.",
+          "Ingen dobbeltlogikk, ingen skjult magi. Det som gjelder, gjelder, og kan forklares, feilsøkes og stoles på.",
       },
       predictability: {
-        title: "Forutsigbarhet foran wow",
+        title: "Forutsigbarhet fremfor effekter",
         body:
-          "Samme handling gir samme resultat. Design og teknikk henger sammen – eller så bygges det ikke.",
+          "Progress er bygget med forutsigbarhet i fokus. Samme handling skal gi samme resultat, og designet skal støtte funksjonen – ikke distrahere fra den.",
       },
       respect: {
-        title: "Respekt for tid og hode",
+        title: "Utviklet med respekt for brukerens tid",
         body:
-          "Alt som stjeler fokus uten å gi verdi regnes som en feil. Målet er rolig trygghet: “det bare fungerer”.",
+          "Målet med Progress er at løsningen skal oppleves forutsigbar og rolig. Man skal slippe å bruke tid og energi på verktøyet og heller fokusere på jobben som skal gjøres.",
       },
     },
 
     audience:
-      "Dette er verktøy for folk som jobber strukturert med prosjekter, oppfølging og gjennomføring – og som ønsker oversikt, kontroll og dokumentasjon uten at verktøyet blir en belastning i seg selv.",
+      "Dette er verktøy for folk som jobber strukturert med prosjekter, oppfølging og gjennomføring, som ønsker oversikt, kontroll og dokumentasjon uten at verktøyet i seg selv blir en belastning.",
   },
 
   about: {
@@ -118,7 +118,7 @@ const no = {
     started: {
       title: "Hvordan dette startet",
       p1:
-        "Morning Coffee Labs ble til av et ganske enkelt behov: å få bedre flyt og bedre oversikt i arbeid som ofte er komplekst, fullt av avhengigheter – og hvor endringer skjer underveis. Vi tror ikke at mer “system” alltid gir mer kontroll. Ofte er det motsatt: kontroll kommer av tydelige valg, forutsigbarhet og verktøy som ikke står i veien.",
+        "Morning Coffee Labs ble til av et ganske enkelt behov: å få bedre flyt og oversikt i arbeid som ofte er komplekst og fullt av avhengigheter, hvor endringer ofte skjer underveis. Vi tror ikke at mer “system” alltid gir mer kontroll. Ofte er det motsatt: kontroll kommer av tydelige valg, forutsigbarhet og verktøy som ikke står i veien.",
       p2:
         "Derfor bygger vi heller få ting skikkelig, enn mange ting halvveis. Som et verksted – ikke som en fabrikk.",
     },
