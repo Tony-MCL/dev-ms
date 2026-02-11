@@ -1,37 +1,44 @@
+// src/components/ScrollToTop.tsx (eller der du har den)
 import React, { useEffect, useLayoutEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-function hardScrollTop() {
-  window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+function scrollTopHard() {
+  // Window
+  window.scrollTo(0, 0);
+
+  // Fallbacks
   document.documentElement.scrollTop = 0;
   document.body.scrollTop = 0;
+
+  const root = document.scrollingElement as HTMLElement | null;
+  if (root) root.scrollTop = 0;
 }
 
 export default function ScrollToTop() {
   const { pathname, search, hash } = useLocation();
 
+  // 1) Slå av browser scroll-restore
   useEffect(() => {
     if ("scrollRestoration" in window.history) {
       window.history.scrollRestoration = "manual";
     }
   }, []);
 
+  // 2) Kjør før paint + etter paint (for å vinne mot layout/focus)
   useLayoutEffect(() => {
     if (hash) return;
 
-    // 1) Scroll til topp
-    hardScrollTop();
+    // Scroll nå
+    scrollTopHard();
 
-    // 2) Fjern fokus så browser ikke autoscroller til et element
+    // Fjern fokus (stopper at browser scroller for å vise fokus-element)
     const active = document.activeElement as HTMLElement | null;
-    if (active && typeof active.blur === "function") {
-      active.blur();
-    }
+    if (active && typeof active.blur === "function") active.blur();
 
-    // 3) Kjør en gang til etter paint/layout
+    // Scroll igjen etter at layout setter seg
     requestAnimationFrame(() => {
-      hardScrollTop();
-      requestAnimationFrame(hardScrollTop);
+      scrollTopHard();
+      requestAnimationFrame(scrollTopHard);
     });
   }, [pathname, search, hash]);
 
