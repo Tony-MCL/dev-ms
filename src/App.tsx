@@ -35,7 +35,7 @@ const App: React.FC = () => {
       {/* ✅ MÅ ligge inne i Router-kontekst, og over Routes */}
       <ScrollToTop />
 
-      <div className="app-content">
+       <div className="app-content" data-scroll-container>
         <Routes>
           {/* Manage System: Progress-universet */}
           <Route path="/progress" element={<ProgressPage />} />
