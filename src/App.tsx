@@ -1,5 +1,5 @@
-import React, { useEffect, useLayoutEffect } from "react";
-import { Routes, Route, Navigate, useLocation } from "react-router-dom";
+import React from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 import ScrollToTop from "./components/ScrollToTop";
 import Header from "./components/Header";
@@ -14,17 +14,6 @@ import ProgressAppPage from "./pages/ProgressAppPage";
 
 import ProgressFremdriftsplanPage from "./pages/ProgressFremdriftsplanPage";
 import ProgressFremdriftsplanBrukPage from "./pages/ProgressFremdriftsplanBrukPage";
-
-const ScrollToTop: React.FC = () => {
-  const { pathname, search, hash } = useLocation();
-
-  useEffect(() => {
-    if (hash) return;
-    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
-  }, [pathname, search, hash]);
-
-  return null;
-};
 
 const App: React.FC = () => {
   return (
