@@ -167,9 +167,9 @@ const ProgressFremdriftsplanBrukPage: React.FC = () => {
               {ctaBack}
             </Link>
 
-            <Link className="hero-cta" to={LINKS.progress}>
+            <a className="hero-cta" href={LINKS.progress} rel="noopener noreferrer">
               {bottomTry}
-            </Link>
+            </a>
 
             <Link className="hero-cta" to="/progress/oversikt">
               {bottomScreens}
