@@ -564,6 +564,9 @@ const en = {
       perMonth: "NOK/mo",
       perYear: "NOK/yr",
     },
+    vatNotice:
+      "Sales are currently exempt from VAT. Once the registration threshold is reached, 25% VAT will be added in accordance with Norwegian regulations.",
+
 
     errors: {
       missingRequired: "Fill in all required fields.",
