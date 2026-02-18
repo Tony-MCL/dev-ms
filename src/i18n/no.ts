@@ -477,7 +477,7 @@ const no = {
     calc: {
       price: "Pris",
       vat: "Mva",
-      total: "Pris inkl. mva",
+      total: "Pris",
       perMonth: "kr/mnd",
       perYear: "kr/år",
     },
@@ -712,7 +712,7 @@ const no = {
       ],
 
       priceHeader: "Pris",
-      priceLine: "{{month}} kr/mnd eller {{year}} kr/år (eks. mva)",
+      priceLine: "{{month}} kr/mnd eller {{year}} kr/år",
       introNote:
         "Introduksjonspris for tidlige brukere. Denne prisen beholdes så lenge lisensen er aktiv.",
 
