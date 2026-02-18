@@ -560,7 +560,7 @@ const en = {
     calc: {
       price: "Price",
       vat: "VAT",
-      total: "Price incl. VAT",
+      total: "Price",
       perMonth: "NOK/mo",
       perYear: "NOK/yr",
     },
@@ -796,7 +796,7 @@ const en = {
       ],
 
       priceHeader: "Price",
-      priceLine: "{{month}} NOK/mo or {{year}} NOK/yr (ex. VAT)",
+      priceLine: "{{month}} NOK/mo or {{year}} NOK/yr",
       introNote:
         "Introductory price for early users. This price is kept as long as the license is active.",
 
