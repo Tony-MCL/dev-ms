@@ -799,6 +799,9 @@ const en = {
       priceLine: "{{month}} NOK/mo or {{year}} NOK/yr",
       introNote:
         "Introductory price for early users. This price is kept as long as the license is active.",
+      vatNotice:
+        "Sales are currently exempt from VAT. Once the registration threshold is reached, 25% VAT will be added in accordance with Norwegian regulations.",
+
 
       buyCta: "Buy a Full version license",
     },
