@@ -715,6 +715,8 @@ const no = {
       priceLine: "{{month}} kr/mnd eller {{year}} kr/år",
       introNote:
         "Introduksjonspris for tidlige brukere. Denne prisen beholdes så lenge lisensen er aktiv.",
+      vatNotice:
+        "Salg er for tiden unntatt merverdiavgift. Når registreringsgrensen nås, vil 25 % merverdiavgift bli lagt til i henhold til norsk regelverk.",
 
       buyCta: "Kjøp lisens for Fullversjon",
     },
