@@ -481,6 +481,9 @@ const no = {
       perMonth: "kr/mnd",
       perYear: "kr/år",
     },
+    vatNotice:
+      "Salg er for tiden unntatt merverdiavgift. Når registreringsgrensen nås, vil 25 % merverdiavgift bli lagt til i henhold til norsk regelverk.",
+
 
     errors: {
       missingRequired: "Fyll inn alle påkrevde felt.",
